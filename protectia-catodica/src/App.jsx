@@ -6,18 +6,24 @@ import Experiment from './pages/Experiment.jsx'
 import Teorie from './pages/Teorie.jsx'
 import Rocky from './site/Rocky.jsx'
 import Mj from './site/Mj.jsx'
-
+import Navbar from './site/Navbar.jsx'
+import Protectia from './pages/Protectia.jsx'
 
 
 function App() {
   return(
-    <>
 
-        <Header />
-        <Rocky />
-        <Mj />
-        <Footer/>
-    </>
+      <>
+        <div className="min-h-screen flex flex-col bg-gray-50 pt-20">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Protectia />} />
+            <Route path="/teorie" element={<Teorie />} />
+            <Route path="/experiment" element={<Experiment />} />
+          </Routes>
+        </div>
+      </>
+
   );
   
 }
