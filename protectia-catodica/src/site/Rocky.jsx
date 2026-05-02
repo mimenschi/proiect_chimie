@@ -10,7 +10,7 @@ function Rocky(){
     const handleButtonClick = () => {
     setShowImage(true);
 
-    const audio = new Audio(HarrysS);
+    const audio = new Audio(HarryS);
     audio.play().catch(error => {
       console.log("Playback failed. Browsers often block auto-playing audio until you interact with the page.", error);
     });
