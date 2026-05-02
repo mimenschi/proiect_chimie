@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
-import HailMary from '../assets/HailMary.png'
 import MicaheJ from '../assets/whoIsIt.mp3'
-import HarryS from '../assets/signOfTheTimes.mp3'
+import Leclerc from '../assets/Leclerc.png'
 
 
-function Rocky(){
+function Mj(){
     const [showImage, setShowImage] = useState(false);
 
     const handleButtonClick = () => {
     setShowImage(true);
 
-    const audio = new Audio(HarrysS);
+    const audio = new Audio(MicaheJ);
     audio.play().catch(error => {
       console.log("Playback failed. Browsers often block auto-playing audio until you interact with the page.", error);
     });
@@ -18,7 +17,7 @@ function Rocky(){
 
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Suport moral </h1>
+      <h1>Suport Moral 2</h1>
       <button onClick={handleButtonClick}>
         Aici
       </button>
@@ -26,7 +25,7 @@ function Rocky(){
       <div style={{ marginTop: '20px' }}>
         {showImage && (
           <img 
-            src={HailMary}
+            src={Leclerc}
             alt="Dynamic content" 
             style={{ borderRadius: '10px' }}
           />
@@ -37,4 +36,4 @@ function Rocky(){
 }
 
 
-export default Rocky
+export default Mj
