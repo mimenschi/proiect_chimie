@@ -4,8 +4,8 @@ import Footer from './site/Footer.jsx'
 function App() {
   return(
     <>
-      <Header/>
-      <Footer/>
+        <Header/>
+        <Footer/>
     </>
   );
   
