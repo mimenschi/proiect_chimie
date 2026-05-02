@@ -12,13 +12,8 @@ import Mj from './site/Mj.jsx'
 function App() {
   return(
     <>
-        <Router>
-                <Routes>
-                    <Route path="/" element={<Header />} />
-                    <Route path="/Teorie" element={<Teorie />} />
-                    <Route path="/Experiment" element={<Experiment />} />
-                </Routes>
-            </Router>
+
+        <Header />
         <Rocky />
         <Mj />
         <Footer/>

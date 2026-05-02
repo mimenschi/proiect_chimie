@@ -7,7 +7,10 @@
 function Footer(){
     return(
         <footer>
-            <p>&copy; {new Date().getFullYear()}  Proiect realizat de CIJENSCHI GEORGE si CONSTANDACHE BIANCA-IUSTINA studenti in anul 1 din cadrul Facultatii de Automatica si Calculatoarea, UNSTPB</p>
+            <p>&copy; {new Date().getFullYear()} Copyright | 
+                Proiect realizat de CIJENSCHI GEORGE si CONSTANDACHE BIANCA-IUSTINA studenti la Facultatea de Automatica si Calculatoare ,
+                Universitatea Nationala de Stiinta si Tehnologie Politehnica Bucuresti - Sesiunea de Comunicari Stiintifice | Mai 2026
+            </p>
         </footer>
     );
 }
