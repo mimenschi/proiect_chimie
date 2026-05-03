@@ -57,8 +57,31 @@ body {
   width: 100vw;
   background-color: #16171d;
 }
-
-
+/*COUNTER */
+.counter{
+  text-align: right;
+  color: #e5e4e7;
+  font-family: Arial, sans-serif;
+}
+.count-display{
+  font-size:2em;
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: #fc84e8d5;
+}
+.counter-button{
+  width:100px;
+  height:20px;
+  font-size:1em;
+  margin: 0px 5px;
+  background-color: #c084fc;
+  color: #f4f3ec;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}.counter-button{
+  background-color: #c084fcd5;
+}
 /*FOOTER STYLE*/
 
 

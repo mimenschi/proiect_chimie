@@ -1,0 +1,20 @@
+import React, { useState } from "react"
+function Volgage() {
+
+    const [count, setCount] = useState(0);
+
+    const increment = () => {
+        setCount(count + 1);
+    }
+
+    const decrement = () => {
+        setCount(count - 1);
+    }
+    return (<div className="counter">
+        <p className="count-display">{count}</p>
+        <button classNAme="counter-button" onClick={decrement}>down</button>
+        <button classNAme="counter-button" onClick={increment}>up</button>
+
+    </div>);
+}
+export default Voltage
