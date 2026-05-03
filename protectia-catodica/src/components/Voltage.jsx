@@ -12,8 +12,8 @@ function Voltage() {
     }
     return (<div className="counter">
         <p className="count-display">{count}</p>
-        <button classNAme="counter-button" onClick={decrement}>down</button>
-        <button classNAme="counter-button" onClick={increment}>up</button>
+        <button className="counter-button" onClick={decrement}>down</button>
+        <button className="counter-button" onClick={increment}>up</button>
 
     </div>);
 }

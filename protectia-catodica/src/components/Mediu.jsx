@@ -1,4 +1,7 @@
-import Select from "react-dropdown-select";
+import { Select } from "react-dropdown-select"
+import React, { useState } from "react"
+
+
 function Mediu() {
     const [selectedValue, setSelectedValue] = useState([]);
     const options = [
@@ -6,7 +9,7 @@ function Mediu() {
         { label: "acid", value: "Acid" },
         { label: "neutru", value: "Neutru" },
     ];
-    return (<div className="select-mediu">
+    return (<div>
         <Select
             name="Selectează mediul"
             values={selectedValue}
@@ -15,5 +18,5 @@ function Mediu() {
         />
 
     </div>);
-};
+}
 export default Mediu
