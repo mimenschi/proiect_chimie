@@ -7,8 +7,7 @@ function Navbar() {
         //bg-slate-800 culoare pentru background
         //shadow-lg umbra
         //py si px sunt pixeli pe Ox si Oy
-        <nav className='bg-slate-800 shadow-lg flex items-center justify-between 
-        py-3 px-10 fixed top-0 left-0 w-full'>
+        <nav className="navbar">
             <Link to="/">
                 <span className="font-semibold text-lg flex items-center gap-3 text-blue-400">
                     <img 
