@@ -143,6 +143,61 @@ body {
 /*   ^^^^^^^   Asta e pentru titlul de langa poza, daca vrem putem renunta la el*/
 
 
+
+/*Butonul de langa logo*/
+.butonasLogo{
+  font-size: 40px;
+  line-height: 28px;
+  letter-spacing: 0.4px;
+}
+
+.butonasLogo:hover{
+  color: #9f60cc;
+}
+
+.spanLogo{
+  font-family: Bold;
+  align-items: center;
+  gap: 3px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/*---------------------*/
+
+/*Celelalte butoane*/
+/*text-base font-medium hover:text-sky-300 transition-colors duration-200*/
+
+
+.butonas{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.butonas:hover{
+  color: #9f60cc;
+}
+
+
+/*Nu am NICIO idee de ce am asta aici, tutorialul pe care l am urmarit la navbar folosea 2 clase diferite*/
+/*Astfel si eu voi folosi 2*/
+/*Cred ca un amerge pe link si una pe text, idfk*/
+
+
+.butonasCeva{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+}
+
+
+/*-----------------*/
+
 #root {
   max-width: 100%;
   margin: 0;

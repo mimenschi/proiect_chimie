@@ -9,25 +9,25 @@ function Navbar() {
         //py si px sunt pixeli pe Ox si Oy
         <nav className="navbar">
             <Link to="/">
-                <span className="font-semibold text-lg flex items-center gap-3 text-blue-400">
+                <span className="spanLogo">
                     <img 
                         src={Logo} 
                         alt="Logo" 
                         className="poza" 
                         />
-                    <span className="text-xl tracking-wide">Protectia Catodica</span>
+                    <span className="butonasLogo">Protectia Catodica</span>
                 </span>
             </Link>
 
-            <div className="flex items-center gap-5 text-white">
+            <div className="butonasCeva">
                 <Link 
                 to="/experiment" 
-                className="text-base font-medium hover:text-sky-300 transition-colors duration-200">Experiment
+                className="butonas">Experiment
             </Link>
 
                 <Link 
                 to="/teorie" 
-                className="text-base font-medium hover:text-sky-300 transition-colors duration-200">Teorie
+                className="butonas">Teorie
             </Link>
             </div>
         </nav>

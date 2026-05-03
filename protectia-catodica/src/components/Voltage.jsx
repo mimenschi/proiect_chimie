@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-function Volgage() {
+function Voltage() {
 
     const [count, setCount] = useState(0);
 
