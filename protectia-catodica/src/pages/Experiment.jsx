@@ -7,6 +7,7 @@ function Experiment() {
   return (
     <>
       <Voltage />
+      <Mediu />
       <Footer />
     </>
   );
