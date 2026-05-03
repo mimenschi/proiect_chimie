@@ -10,7 +10,6 @@ function Experiment() {
     <>
       <Voltage />
       <Mediu />
-      <Metals />
       <Footer />
     </>
   );
