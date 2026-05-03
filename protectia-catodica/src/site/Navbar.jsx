@@ -8,8 +8,8 @@ function Navbar() {
         //shadow-lg umbra
         //py si px sunt pixeli pe Ox si Oy
         <nav className="navbar">
-            <Link to="/">
-                <span className="spanLogo">
+            <Link to="/" className="butonasCeva">
+                <span className="butonasCeva">
                     <img 
                         src={Logo} 
                         alt="Logo" 
