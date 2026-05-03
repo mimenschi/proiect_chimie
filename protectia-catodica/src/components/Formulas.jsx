@@ -1,0 +1,23 @@
+import React from "react";
+import Mediu from "./Mediu";
+import Metals from "./Metals";
+import Voltage from "./Voltage";
+
+function Formulas() {
+
+    const mediuValori = { acid: 0, neutru: 0.401, bazic: 0.401 };
+    const metaleValori = {
+        "Fier": -0.44, "Zinc": -0.763,
+        "Aluminiu": -1.66, "Magneziu": -2.37, "Siliciu": -0.14, "Nichel": -0.25
+    };
+    const epsilonPoz = 0.266;
+
+
+    return (
+        <div className="formulas">
+            <p>Rezultatele experimentului</p>
+
+        </div>
+    );
+}
+export default Formulas

@@ -1,5 +1,5 @@
 import React from "react";
-function Metale(onSelectMetal){
+function Metals(onSelectMetal){
     
     const handleMetal = (numeMediu) =>{
         if(onSelectMetal){
@@ -8,7 +8,7 @@ function Metale(onSelectMetal){
     };
     
     return(
-        <div>
+        <div className="metals">
         <p>Selectează metalul</p>
         <button onClick={() => handleClick("Aluminiu")}>Aluminiu</button>
         <button onClick={() => handleClick("Fier")}>Fier</button>
@@ -20,4 +20,4 @@ function Metale(onSelectMetal){
     );
 
 }
-export default Metale
+export default Metals

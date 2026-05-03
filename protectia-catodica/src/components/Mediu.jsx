@@ -9,7 +9,7 @@ function Mediu() {
         { label: "acid", value: "Acid" },
         { label: "neutru", value: "Neutru" },
     ];
-    return (<div>
+    return (<div className="mediu">
         <Select
             name="Selectează mediul"
             values={selectedValue}
