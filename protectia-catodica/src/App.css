@@ -1,3 +1,11 @@
+.App{
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;

@@ -53,7 +53,29 @@
 
 body {
   margin: 0;
+  padding: 0;
+  width: 100vw;
+  background-color: #16171d;
 }
+
+
+/*FOOTER STYLE*/
+
+
+.footer{
+  /*Daca vrei ca footer ul sa nu fie lipit de josul paginii comenteaza astea*/
+
+  /*----------------------------------------------------*/
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  /*----------------------------------------------------*/
+
+  
+}
+
+
 
 #root {
   max-width: 100%;

@@ -14,7 +14,7 @@ function App() {
   return(
 
       <>
-        <div className="min-h-screen flex flex-col bg-gray-50 pt-20">
+        <div className="App">
           <Navbar />
           <Routes>
             <Route path="/" element={<Protectia />} />
