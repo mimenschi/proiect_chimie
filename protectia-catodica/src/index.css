@@ -75,6 +75,8 @@ body {
   
 }
 
+/*NAVBAR STYLE*/
+
 .navbar{
   background-color: #1e293b;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
@@ -97,6 +99,25 @@ body {
   /* Aici sta deasupra la text, ca sa nu avem probleme */
   z-index: 1000;
 }
+
+/*IMAGE STYLE*/
+
+/*h-10 w-10 object-contain rounded-full border border-slate-600*/
+
+
+.poza{
+  height: 250px;
+  width: 250px;
+  border: slateblue;
+}
+
+
+
+
+/*BUTOANE NAVBAR STYLE*/
+
+/*"text-xl tracking-wide"*/
+/*   ^^^^^^^   Asta e pentru titlul de langa poza, daca vrem putem renunta la el*/
 
 
 #root {

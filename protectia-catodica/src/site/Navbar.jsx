@@ -13,7 +13,7 @@ function Navbar() {
                     <img 
                         src={Logo} 
                         alt="Logo" 
-                        className="h-10 w-10 object-contain rounded-full border border-slate-600" 
+                        className="poza" 
                         />
                     <span className="text-xl tracking-wide">Protectia Catodica</span>
                 </span>
