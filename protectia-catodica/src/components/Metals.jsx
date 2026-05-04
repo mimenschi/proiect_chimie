@@ -1,11 +1,6 @@
 import React from "react";
-function Metals(onSelectMetal){
+function Metals(){
     
-    const handleMetal = (numeMediu) =>{
-        if(onSelectMetal){
-            onSelectMetal(numeMetal);
-        }
-    };
     
     return(
         <div className="metals">

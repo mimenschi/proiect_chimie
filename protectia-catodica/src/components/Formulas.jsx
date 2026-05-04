@@ -24,7 +24,15 @@ function Formulas() {
             </div>
             <div className="formulas">
                 <p>Rezultatele experimentului</p>
-
+            </div>
+            <div className="results">
+                <table>
+                    <tr>
+                        <th>{epsilonPoz}</th>
+                        <th>doi</th>
+                        <th>trei</th>
+                    </tr>
+                </table>
             </div>
         </div>
     );

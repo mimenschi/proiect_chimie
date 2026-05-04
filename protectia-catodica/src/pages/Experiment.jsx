@@ -7,15 +7,11 @@ import Formulas from '../components/Formulas.jsx';
 
 function Experiment() {
 
-  const handleValueFromMediu = (valoare) => {
-        console.log("Părintele a primit:", valoare);
-      };
-
   return (
     <>
       <Voltage />
       <Mediu />
-      <Metals onSelection={handleValueFromMediu}/>
+      <Metals />
       <Formulas />
       <Footer />
     </>

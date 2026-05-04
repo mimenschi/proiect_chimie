@@ -83,6 +83,12 @@ body {
 }.counter-button{
   background-color: #c084fcd5;
 }
+
+.buttonSimulate{
+  font-size:2em;
+  cursor:pointer;
+}
+
 /*FOOTER STYLE*/
 
 
