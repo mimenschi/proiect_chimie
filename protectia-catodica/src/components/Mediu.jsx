@@ -2,6 +2,10 @@ import { Select } from "react-dropdown-select"
 import React, { useState } from "react"
 
 
+
+ {/*AICI NU VREI SA POTI TASTA IN CAMP 
+               M AI RUGAT SA TI ADUC AMINTE */}
+
 function Mediu() {
     const [selectedValue, setSelectedValue] = useState([]);
     const options = [
