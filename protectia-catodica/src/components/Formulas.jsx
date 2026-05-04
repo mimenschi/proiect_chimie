@@ -1,9 +1,16 @@
-import React from "react";
+/*import React from "react";*/
+import React, { useContext } from 'react';
+
 import Mediu from "./Mediu";
 import Metals from "./Metals";
 import Voltage from "./Voltage";
 
+import { voltageContext } from "./Voltage";
+
+
 function Formulas() {
+
+    const voltage = useContext(voltageContext);
 
     const mediuValori = { acid: 0, neutru: 0.401, bazic: 0.401 };
     const metaleValori = {
@@ -23,7 +30,7 @@ function Formulas() {
                     Simulează experimentul </button>
             </div>
             <div className="formulas">
-                <p>Rezultatele experimentului</p>
+                <p>Rezultatele experimentului {voltage}</p>
             </div>
             <div className="results">
                 <table>

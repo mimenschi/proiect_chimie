@@ -1,6 +1,7 @@
 import { Select } from "react-dropdown-select"
-import React, { useState } from "react"
+import React, { useState,useContext,createContext } from "react"
 
+import { voltageContext } from "./Voltage";
 function Mediu() {
 
     const options = [
@@ -17,7 +18,7 @@ function Mediu() {
             required
             /*onChange={handleChange}*/
         />
-
+        
     </div>);
 }
 export default Mediu
