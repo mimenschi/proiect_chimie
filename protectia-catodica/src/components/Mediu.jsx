@@ -1,13 +1,16 @@
 import { Select } from "react-dropdown-select"
 import React, { useState } from "react"
 
-
-
- {/*AICI NU VREI SA POTI TASTA IN CAMP 
-               M AI RUGAT SA TI ADUC AMINTE */}
-
-function Mediu() {
+function Mediu(onSelection) {
     const [selectedValue, setSelectedValue] = useState([]);
+
+    const handleChange = (values) => {
+        setSelectedValue(values);
+        if(onSelection) {
+            onSelection(values);
+        }
+    };
+
     const options = [
         { label: "baza", value: "Bazic" },
         { label: "acid", value: "Acid" },
@@ -18,7 +21,9 @@ function Mediu() {
             name="Selectează mediul"
             values={selectedValue}
             options={options}
-            onChange={(values) => setSelectedValue(values)}
+            searchable={false}
+            required
+            onChange={handleChange}
         />
 
     </div>);

@@ -11,12 +11,21 @@ function Formulas() {
         "Aluminiu": -1.66, "Magneziu": -2.37, "Siliciu": -0.14, "Nichel": -0.25
     };
     const epsilonPoz = 0.266;
-
+    /*
+    const ecor = em + epsilonPoz
+    const etaA = ecor - metale[metalPlasat]
+    const etaC = ecor - solutii[solutiePlasata]*/
 
     return (
-        <div className="formulas">
-            <p>Rezultatele experimentului</p>
+        <div>
+            <div className="buttonSimulate">
+                <button onClick={() => handleClick("Aluminiu")}>
+                    Simulează experimentul </button>
+            </div>
+            <div className="formulas">
+                <p>Rezultatele experimentului</p>
 
+            </div>
         </div>
     );
 }
