@@ -3,17 +3,15 @@ import React, { useState, useContext, createContext } from "react"
 
 import Formulas from "./Formulas";
 
-/*export const voltageContext = createContext();
-export const metalContext = createContext();
-export const mediuContext = createContext();*/
+export const parametersContext = createContext();
 
 function Components() {
 
-    /*const [voltage, setVoltage] = useState("alabalavoltaj");
-    const [metal, setMetal] = useState("alabalametal");*/
+    const [volt, setVolt] = useState(0)
+    const [metal, setMetal] = useState("")
+    const [mediu, setMediu] = useState("")
 
     /*MEDIU*/
-    /*const [mediu, setMediu] = useState("alabalamediu");*/
     const options = [
         { label: "baza", value: "Bazic" },
         { label: "acid", value: "Acid" },
@@ -22,55 +20,53 @@ function Components() {
 
     return (
         <div>
-
             {/*VOLTMETRU*/}
 
             <div className="counter">
-                { /*<p className="count-display">{count}</p>*/}
                 <form>
-                    <label>Voltmetru lala</label>
+                    <label>Voltmetru</label>
                     <input
                         type="number"
                         step="0.01"
                         min="0"
                         max="15"
+                        value={volt}
+                        onChange={(e) => setVolt(e.target.value)}
                         required
                     />
                 </form>
-                {/*<voltageContext.Provider value={voltage}>
-                    <Formulas voltage={voltage} />
-                </voltageContext.Provider>*/}
-            <p>da ma da curenteaza te</p>
+                <p> {volt}</p>
             </div>
 
             {/*METALE*/}
+
             <div className="metals">
                 <p>Selectează metalul</p>
-                <button onClick={() => handleClick("Aluminiu")}>Aluminiu</button>
-                <button onClick={() => handleClick("Fier")}>Fier</button>
-                <button onClick={() => handleClick("Magneziu")}>Magneziu</button>
-                <button onClick={() => handleClick("Nichel")}>Nichel</button>
-                <button onClick={() => handleClick("Staniu")}>Staniu</button>
-                <button onClick={() => handleClick("Zinc")}>Zinc</button>
-
-                {/*<metalContext.Provider value={metal}>
-                    <Formulas metal={metal} />
-                </metalContext.Provider>*/}
+                <button onClick={() => setMetal("Aluminiu")}>Aluminiu</button>
+                <button onClick={() => setMetal("Fier")}>Fier</button>
+                <button onClick={() => setMetal("Magneziu")}>Magneziu</button>
+                <button onClick={() => setMetal("Nichel")}>Nichel</button>
+                <button onClick={() => setMetal("Staniu")}>Staniu</button>
+                <button onClick={() => setMetal("Zinc")}>Zinc</button>
+                <p>{metal}</p>
             </div>
 
             {/*MEDIU*/}
+
             <div className="mediu">
                 <Select
                     name="Selectează mediul"
-                    /*values={selectedValue}*/
                     options={options}
                     searchable={false}
+                    onChange={(values) => setMediu(values[0]?.value)}
                     required
-                /*onChange={handleChange}*/
                 />
-                {/*<mediuContext.Provider value={mediu}>
+                <p>{mediu}</p>
+                {/*<parametersContext.Provider value={mediu}>
                     <Formulas mediu={mediu} />
-                </mediuContext.Provider>*/}
+                </parametersContext.Provider>*/}
+                {/*trebuie facut un obiect/vector cu toate variabilele 
+                care trebuie transmise si el se va transmite */}
             </div>
         </div>);
 
