@@ -4,17 +4,18 @@ import Mediu from './Mediu';
 import Metals from './Metals';
 import Voltage from './Voltage';
 
-import { voltageContext } from "./Voltage";
-import { metalContext } from './Metals';
+/*import { voltageContext } from "./Voltage";
+import { metalContext } from './Metals';*/
 
 function Intermediate(){
 
-        const voltage = useContext(voltageContext);
-        const metal = useContext(metalContext);
+        /*const voltage = useContext(voltageContext);
+        const metal = useContext(metalContext);*/
     return(
         <div>
-           <p> {voltage}</p>
-           <p>{metal}</p>
+          {/* <p> {voltage}</p>
+           <p>{metal}</p>*/}
+        <p> doamne ajuta</p>
         </div>
 
     );

@@ -1,7 +1,6 @@
 import { Select } from "react-dropdown-select"
 import React, { useState,useContext,createContext } from "react"
 
-import { voltageContext } from "./Voltage";
 function Mediu() {
 
     const options = [
