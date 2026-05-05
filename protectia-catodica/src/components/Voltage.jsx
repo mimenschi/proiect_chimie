@@ -1,5 +1,5 @@
 import React, { useState, createContext } from 'react';
-import Intermediate from './Intermediate';
+
 
 function Voltage() {
 

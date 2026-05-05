@@ -1,5 +1,5 @@
 import React, {useContext,createContext,useState} from "react";
-import Intermediate from "./Intermediate";
+
 
 export const metalContext = createContext();
 function Metals(){

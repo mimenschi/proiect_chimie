@@ -3,17 +3,17 @@ import React, { useState, useContext, createContext } from "react"
 
 import Formulas from "./Formulas";
 
-export const voltageContext = createContext();
+/*export const voltageContext = createContext();
 export const metalContext = createContext();
-export const mediuContext = createContext();
+export const mediuContext = createContext();*/
 
 function Components() {
 
-    const [voltage, setVoltage] = useState("alabalavoltaj");
-    const [metal, setMetal] = useState("alabalametal");
+    /*const [voltage, setVoltage] = useState("alabalavoltaj");
+    const [metal, setMetal] = useState("alabalametal");*/
 
     /*MEDIU*/
-    const [mediu, setMediu] = useState("alabalamediu");
+    /*const [mediu, setMediu] = useState("alabalamediu");*/
     const options = [
         { label: "baza", value: "Bazic" },
         { label: "acid", value: "Acid" },
@@ -28,7 +28,7 @@ function Components() {
             <div className="counter">
                 { /*<p className="count-display">{count}</p>*/}
                 <form>
-                    <label>Voltmetru</label>
+                    <label>Voltmetru lala</label>
                     <input
                         type="number"
                         step="0.01"
@@ -40,6 +40,7 @@ function Components() {
                 {/*<voltageContext.Provider value={voltage}>
                     <Formulas voltage={voltage} />
                 </voltageContext.Provider>*/}
+            <p>da ma da curenteaza te</p>
             </div>
 
             {/*METALE*/}

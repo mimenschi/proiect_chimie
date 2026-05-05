@@ -1,9 +1,6 @@
 /*import React from "react";*/
 import React, { useContext } from 'react';
 
-import Mediu from "./Mediu";
-import Metals from "./Metals";
-import Voltage from "./Voltage";
 
 import Components from './Components';
 
