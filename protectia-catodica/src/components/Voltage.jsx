@@ -5,7 +5,6 @@ function Voltage() {
 
     
     return (<div className="counter">
-        { /*<p className="count-display">{count}</p>*/}
         <form>
             <label>Voltmetru</label>
             <input
