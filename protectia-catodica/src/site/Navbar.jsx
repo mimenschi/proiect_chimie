@@ -1,6 +1,7 @@
 import React from "react"
 import Logo from '../assets/logoHM.png'
 import { Link } from 'react-router-dom'
+import { NavLink } from "react-router-dom"
 
 function Navbar() {
     return (
@@ -20,15 +21,15 @@ function Navbar() {
             </Link>
 
             <div className="butonasCeva">
-                <Link 
+                <NavLink 
                 to="/experiment" 
-                className="butonas">Experiment
-            </Link>
+                className="butonasDom">Experiment
+            </NavLink>
 
-                <Link 
+                <NavLink 
                 to="/teorie" 
-                className="butonas">Teorie
-            </Link>
+                className="butonasDom">Teorie
+            </NavLink>
             </div>
         </nav>
     );
