@@ -37,9 +37,9 @@ function Components() {
                         required
                     />
                 </form>
-                <voltageContext.Provider value={voltage}>
+                {/*<voltageContext.Provider value={voltage}>
                     <Formulas voltage={voltage} />
-                </voltageContext.Provider>
+                </voltageContext.Provider>*/}
             </div>
 
             {/*METALE*/}
@@ -52,9 +52,9 @@ function Components() {
                 <button onClick={() => handleClick("Staniu")}>Staniu</button>
                 <button onClick={() => handleClick("Zinc")}>Zinc</button>
 
-                <metalContext.Provider value={metal}>
+                {/*<metalContext.Provider value={metal}>
                     <Formulas metal={metal} />
-                </metalContext.Provider>
+                </metalContext.Provider>*/}
             </div>
 
             {/*MEDIU*/}
@@ -67,9 +67,9 @@ function Components() {
                     required
                 /*onChange={handleChange}*/
                 />
-                <mediuContext.Provider value={mediu}>
+                {/*<mediuContext.Provider value={mediu}>
                     <Formulas mediu={mediu} />
-                </mediuContext.Provider>
+                </mediuContext.Provider>*/}
             </div>
         </div>);
 

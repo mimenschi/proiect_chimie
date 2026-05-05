@@ -5,12 +5,14 @@ import Mediu from "./Mediu";
 import Metals from "./Metals";
 import Voltage from "./Voltage";
 
-import { voltageContext } from "./Voltage";
+import Components from './Components';
+
+/*import { voltageContext } from "./Voltage";*/
 
 
 function Formulas() {
 
-    const voltage = useContext(voltageContext);
+    /*const voltage = useContext(voltageContext);*/
 
     const mediuValori = { acid: 0, neutru: 0.401, bazic: 0.401 };
     const metaleValori = {
@@ -26,11 +28,11 @@ function Formulas() {
     return (
         <div>
             <div className="buttonSimulate">
-                <button onClick={() => handleClick("Aluminiu")}>
+                <button onClick={() => handleClick("Simulate")}>
                     Simulează experimentul </button>
             </div>
             <div className="formulas">
-                <p>Rezultatele experimentului {voltage}</p>
+                <p>Rezultatele experimentului </p>
             </div>
             <div className="results">
                 <table>
