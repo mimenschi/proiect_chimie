@@ -158,7 +158,6 @@ body {
 
 .butonasLogo:hover{
   color: #9f60cc;
-  background-color: #e5e4e7;
 }
 
 .spanLogo{
@@ -175,8 +174,9 @@ body {
 /*Celelalte butoane*/
 /*text-base font-medium hover:text-sky-300 transition-colors duration-200*/
 
-.butonas:hover{
+.butonasDom:hover{
   color: #9f60cc;
+  background-color: #e5e4e7;
 }
 
 
