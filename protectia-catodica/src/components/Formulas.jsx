@@ -36,11 +36,14 @@ function Formulas() {
             </div>
             <div className="results">
                 <table>
-                    <tr>
-                        <th>{epsilonPoz}</th>
-                        <th>doi</th>
-                        <th>trei</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>{epsilonPoz}</th>
+                            <th>doi</th>
+                            <th>trei</th>
+                        </tr>
+                    </thead>
+
                 </table>
             </div>
         </div>
