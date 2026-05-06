@@ -9,7 +9,6 @@ function Experiment() {
   return (
     <>
       <Components />
-      <Formulas />
       <Footer />
     </>
   );
