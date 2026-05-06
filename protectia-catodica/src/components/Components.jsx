@@ -8,14 +8,14 @@ export const parametersContext = createContext();
 function Components() {
 
     const [volt, setVolt] = useState(0)
-    const [metal, setMetal] = useState("")
+    const [metal, setMetal] = useState(0)
     const [mediu, setMediu] = useState("")
 
     /*MEDIU*/
     const options = [
-        { label: "baza", value: "Bazic" },
-        { label: "acid", value: "Acid" },
-        { label: "neutru", value: "Neutru" },
+        { label: "baza", value: "0.401" },
+        { label: "acid", value: 0 },
+        { label: "neutru", value: "0.401 "},
     ];
 
     return (
@@ -42,12 +42,12 @@ function Components() {
 
             <div className="metals">
                 <p>Selectează metalul</p>
-                <button onClick={() => setMetal("Aluminiu")}>Aluminiu</button>
-                <button onClick={() => setMetal("Fier")}>Fier</button>
-                <button onClick={() => setMetal("Magneziu")}>Magneziu</button>
-                <button onClick={() => setMetal("Nichel")}>Nichel</button>
-                <button onClick={() => setMetal("Staniu")}>Staniu</button>
-                <button onClick={() => setMetal("Zinc")}>Zinc</button>
+                <button onClick={() => setMetal(-1.66)}>Aluminiu</button>
+                <button onClick={() => setMetal(-0.44)}>Fier</button>
+                <button onClick={() => setMetal(-2.37)}>Magneziu</button>
+                <button onClick={() => setMetal(-0.25)}>Nichel</button>
+                <button onClick={() => setMetal(-0.14)}>Staniu</button>
+                <button onClick={() => setMetal(-0.763)}>Zinc</button>
                 <p>{metal}</p>
             </div>
 
