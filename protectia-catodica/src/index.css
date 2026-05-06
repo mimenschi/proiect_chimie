@@ -133,6 +133,22 @@ body {
   top: 0;
 }
 
+
+
+/*COMPONENTE TEXT*/
+
+
+.textTeorie{
+  line-height: 30px;
+  font-size: larger;
+  font-weight: 500;
+  word-spacing: 0.5px;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+
 /*IMAGE STYLE*/
 
 .poza{
@@ -140,6 +156,49 @@ body {
   width: 250px;
   border: slateblue;
 }
+
+
+
+/*Mediu Experiment*/
+
+.metals{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+
+.metals p{
+  margin-top: 10px;
+  text-align: right;
+  width: 100%;
+}
+.metals ul{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding-right: 100px;
+}
+
+.metals button{
+  width: 200px;
+  padding: 8px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.metal-value{
+  margin-top: 10px;
+  width: 150px;
+  text-align: center;
+  font-weight: 300;
+  color: white;
+}
+
+
 
 /*BUTOANE NAVBAR STYLE*/
 
@@ -205,6 +264,26 @@ body {
   padding: 30px;
   margin: 10 20px;
   border-radius: 20px;
+}
+
+
+.bara-mediu{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mediu{
+  width: 400px;
+  min-width: 250px;
+  padding-left: 20px;
+  padding: 10px;
+  color: #b3c1d9;
+  font-weight: 600;
+  border: 10px;
+  border-radius: 50px;
 }
 
 

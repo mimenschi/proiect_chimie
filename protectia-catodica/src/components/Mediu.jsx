@@ -8,16 +8,19 @@ function Mediu() {
         { label: "acid", value: "Acid" },
         { label: "neutru", value: "Neutru" },
     ];
-    return (<div className="mediu">
-        <Select
-            name="Selectează mediul"
-            /*values={selectedValue}*/
-            options={options}
-            searchable={false}
-            required
+    return (
+        <div className="bara-mediu">
+            <div className="mediu">
+            <Select
+                name="Selectează mediul"
+                /*values={selectedValue}*/
+                options={options}
+                searchable={false}
+                required
             /*onChange={handleChange}*/
-        />
-        
-    </div>);
+            />
+            </div>
+
+        </div>);
 }
 export default Mediu

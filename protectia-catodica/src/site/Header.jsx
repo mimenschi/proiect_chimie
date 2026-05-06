@@ -7,13 +7,12 @@ function Header() {
      return(
         <header>
             <h1>Protecția catodică cu anozi de sacrificiu</h1>
-            <nav>
-                <ul>
-                    <li>Pagina principala</li>
-                    <li>Teorie</li>
-                    <li>Experiment</li>
-                </ul>
-            </nav>
+            <p className='textTeorie'>Protecţia catodică cu anozi de sacrificiu este o metodă de protecţie (electrochimică)
+împotriva coroziunii ce se aplică construcţiilor metalice în contact cu solul, apa marilor, sau
+atmosfera (conducte de oţel pentru transportul fluidelor, stâlpi metalici de susţinere,
+rezervoarele, cazanele, coloanele de extracţie, cablurile etc.). Protecţia catodică constă în
+modificarea potenţialului de coroziune al sistemului metalic de protejat spre valori atât de
+negative, încât coroziunea să nu mai poată avea loc</p>
         </header>
     );
 }
