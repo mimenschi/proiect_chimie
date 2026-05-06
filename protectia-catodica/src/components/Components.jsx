@@ -78,30 +78,41 @@ function Components() {
                 </form>
             </div>
 
-            {/*METALE*/}
 
-            <div className="metals">
-                <p className="textMetal">Selectează metalul</p>
-                <button onClick={() => setMetal(-1.66)}>Aluminiu</button>
-                <button onClick={() => setMetal(-0.44)}>Fier</button>
-                <button onClick={() => setMetal(-2.37)}>Magneziu</button>
-                <button onClick={() => setMetal(-2.7)}>Na</button>
-                <button onClick={() => setMetal(-0.23)}>Nichel</button>
-                <button onClick={() => setMetal(-0.13)}>Plumb</button>
-                <button onClick={() => setMetal(-0.14)}>Staniu</button>
-                <button onClick={() => setMetal(-0.76)}>Zinc</button>
-            </div>
+            {/*MEDIU SI METALE*/}
 
-            {/*MEDIU*/}
+            <div className="mediu-metale">
 
-            <div className="mediu">
-                <Select
-                    name="Selectează mediul"
-                    options={options}
-                    searchable={false}
-                    onChange={(values) => setMediu(values[0]?.value)}
-                    required
-                />
+                {/*MEDIU*/}
+
+                <div className="mediu">
+                    <Select
+                        name="Selectează mediul"
+                        options={options}
+                        searchable={false}
+                        onChange={(values) => setMediu(values[0]?.value)}
+                        required
+                    />
+                </div>
+
+
+                {/*METALE*/}
+
+                <div className="metals">
+                    <p className="textMetal">Selectează metalul</p>
+                    <ul>
+                        <button onClick={() => setMetal(-1.66)}>Aluminiu</button>
+                        <button onClick={() => setMetal(-0.44)}>Fier</button>
+                        <button onClick={() => setMetal(-2.37)}>Magneziu</button>
+                        <button onClick={() => setMetal(-2.7)}>Na</button>
+                        <button onClick={() => setMetal(-0.23)}>Nichel</button>
+                        <button onClick={() => setMetal(-0.13)}>Plumb</button>
+                        <button onClick={() => setMetal(-0.14)}>Staniu</button>
+                        <button onClick={() => setMetal(-0.76)}>Zinc</button>
+                    </ul>
+                </div>
+
+
             </div>
 
             {/*SIMULARE*/}

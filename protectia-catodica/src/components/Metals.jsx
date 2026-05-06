@@ -18,8 +18,8 @@ function Metals(){
                 <button onClick={() => handleClick("Zinc")}>Zinc</button>
             </ul>
 
-            <metalContext.Provider className="metal-value" value={metal}>
-                <Intermediate className="metal-value" metal={metal} />
+            <metalContext.Provider value={metal}>
+                <Intermediate  metal={metal} />
             </metalContext.Provider>
 
         </div>
