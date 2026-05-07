@@ -1,5 +1,6 @@
 import { Select } from "react-dropdown-select"
 import React, { useState } from "react"
+import Poza from '../assets/placehlder.png'
 
 function Components() {
 
@@ -20,7 +21,9 @@ function Components() {
     ];
 
     //formule
-    const epsilonPoz = 0.266;
+    const epsilonRef = 0.266;
+
+    const [a, setCoroz] = useState(0)
 
     //aflarea mesajului si a starii corecte
     const handleSimulation = () => {
@@ -50,8 +53,13 @@ function Components() {
 
         //toti parametrii au fost selectati
         if (error == "") {
-            setSimulate(1)
+            //setSimulate(1)
             setMessage("")
+
+            //formulele aici
+            
+            setCoroz(epsilonRef + volt)
+
         }
 
         //daca nu au fost selectati
@@ -96,6 +104,14 @@ function Components() {
                 </div>
 
 
+            <div>
+                <img className="pozaExp" 
+                    src={Poza}
+                    alt="Dynamic content"
+                    
+                />
+            </div>
+
                 {/*METALE*/}
 
                 <div className="metals">
@@ -118,7 +134,7 @@ function Components() {
             {/*SIMULARE*/}
 
             <div className="buttonSimulate">
-                <button onClick={handleSimulation}>
+                <button className="simulare" onClick={handleSimulation}>
                     Simulează experimentul </button>
                 {message && <p>{message}</p>}
             </div>
@@ -128,14 +144,14 @@ function Components() {
                 <table>
                     <thead>
                         <tr>
-                            <th>unu</th>
-                            <th>doi</th>
-                            <th>trei</th>
+                            <th>ref</th>
+                            <th>egasit</th>
+                            <th>ceva</th>
                         </tr>
                         <tr>
-                            <td>{epsilonPoz}</td>
-                            <td>{simulate}</td>
-                            <td>trei</td>
+                            <td>{epsilonRef}</td>
+                            <td>{a}</td>
+                            <td>ceva</td>
                         </tr>
                     </thead>
 

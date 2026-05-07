@@ -56,7 +56,6 @@ body {
   padding: 0;
   width: 100vw;
   background-color: #16171d;
-  background-image: url("assets/fundal.png");
 }
 
 /*COUNTER */
@@ -258,17 +257,17 @@ body {
 }
 
 .textMetal {
+  font-size: 35px;
   text-align: right;
-  padding-right: 110px;
+  padding-right: 70px;
   /*initial 110 */
 }
 
 
 .butonasMetal {
-  width: 90px;
+  width: 200px;
   padding: 10px;
-  /*initial 8*/
-  font-size: 10px;
+  font-size: 30px;
   font-weight: 300;
   text-align: center;
   cursor: pointer;
@@ -296,14 +295,12 @@ body {
   width: 400px;
   min-width: 250px;
   padding-left: 20px;
-  padding: 10px;
+  padding-right: 40px;
   color: #8e8cf7;
-  background-color: #615FFF;
+  /*background-color: #615FFF;*/
   font-weight: 600;
-  border: 10px;
+  border-radius: 10px;
 }
-
-
 
 .mediu-metale {
   display: flex;
@@ -313,7 +310,12 @@ body {
 }
 
 
-
+.simulare{
+  padding: 20px 55px;
+  font-size: 30px;
+  background-color: #615FFF;
+  border-radius: 10px;
+}
 /*BUTOANE NAVBAR STYLE*/
 
 
