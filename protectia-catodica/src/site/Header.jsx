@@ -6,13 +6,19 @@ import Teorie from '../pages/Teorie.jsx'
 function Header() {
      return(
         <header>
-            <h1>Protecția catodică cu anozi de sacrificiu</h1>
-            <p className='textTeorie'>Protecţia catodică cu anozi de sacrificiu este o metodă de protecţie (electrochimică)
-împotriva coroziunii ce se aplică construcţiilor metalice în contact cu solul, apa marilor, sau
-atmosfera (conducte de oţel pentru transportul fluidelor, stâlpi metalici de susţinere,
-rezervoarele, cazanele, coloanele de extracţie, cablurile etc.). Protecţia catodică constă în
-modificarea potenţialului de coroziune al sistemului metalic de protejat spre valori atât de
-negative, încât coroziunea să nu mai poată avea loc</p>
+            <h1 className="titlu">Scopul lucrării:</h1>
+            <p className='textTeorie'> Electrodul este un sistem electroneutru format dintr-un metal și soluția de electrolit. 
+            În medii corozive, reacțiile la interfața metal/soluție sunt ireversibile, 
+            generând spontan o diferență de potențial, adică potențialul de coroziune (εcor).
+            </p>
+            <br />
+            <p className='textTeorie'>
+            În această lucrarea experimentală se vor măsura cu un voltmetru
+            tensiunile electromotoare (t.e.m.) ale fierului neprotejat şi ale Zn, Al, Cu suprapuse pe rând pe
+            fier faţă de electrodul de referinţă Ag/AgCl. Comparând semnele şi valorile potenţialului de
+            electrod al fierului şi al fierului legat cu Zn, Al şi Cu faţă de electrodul de referinţă se va pune
+            în evidenţă ce metale pot fi utilizate ca anozi de sacrificiu.
+            </p>
         </header>
     );
 }

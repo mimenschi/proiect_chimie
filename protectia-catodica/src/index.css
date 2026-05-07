@@ -56,6 +56,7 @@ body {
   padding: 0;
   width: 100vw;
   background-color: #16171d;
+  background-image: url("assets/fundal.png");
 }
 
 /*COUNTER */
@@ -141,6 +142,11 @@ body {
 
 
 /*COMPONENTE TEXT*/
+
+.titlu{
+  text-align: left;
+  padding-left: 10px;
+}
 
 
 .textTeorie{
