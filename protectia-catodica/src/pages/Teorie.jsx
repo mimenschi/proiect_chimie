@@ -5,6 +5,15 @@ import Footer from '../site/Footer'
 function Teorie() {
   return(
     <>
+
+      
+
+
+
+
+
+
+
       <h2>Reactii chimie:</h2>
       <div>
         <h3 className='textTeorie'>1. Coroziunea cu depolarizare de hidrogen</h3>

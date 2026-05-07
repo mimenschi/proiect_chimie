@@ -16,7 +16,7 @@ function Navbar() {
                         alt="Logo" 
                         className="poza" 
                         />
-                    <span className="butonasLogo">Protectia Catodica</span>
+                    <span className="butonasLogo">Protecția Catodică</span>
                 </span>
             </Link>
 
