@@ -104,7 +104,7 @@ function Components() {
                         <button className="butonasMetal" onClick={() => setMetal(-1.66)}>Aluminiu</button>
                         <button className="butonasMetal" onClick={() => setMetal(-0.44)}>Fier</button>
                         <button className="butonasMetal" onClick={() => setMetal(-2.37)}>Magneziu</button>
-                        <button className="butonasMetal" onClick={() => setMetal(-2.7)}>Na</button>
+                        <button className="butonasMetal" onClick={() => setMetal(-2.7)}>Sodiu</button>
                         <button className="butonasMetal" onClick={() => setMetal(-0.23)}>Nichel</button>
                         <button className="butonasMetal" onClick={() => setMetal(-0.13)}>Plumb</button>
                         <button className="butonasMetal" onClick={() => setMetal(-0.14)}>Staniu</button>
