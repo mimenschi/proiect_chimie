@@ -101,14 +101,14 @@ function Components() {
                 <div className="metals">
                     <p className="textMetal">Selectează metalul</p>
                     <ul>
-                        <button onClick={() => setMetal(-1.66)}>Aluminiu</button>
-                        <button onClick={() => setMetal(-0.44)}>Fier</button>
-                        <button onClick={() => setMetal(-2.37)}>Magneziu</button>
-                        <button onClick={() => setMetal(-2.7)}>Na</button>
-                        <button onClick={() => setMetal(-0.23)}>Nichel</button>
-                        <button onClick={() => setMetal(-0.13)}>Plumb</button>
-                        <button onClick={() => setMetal(-0.14)}>Staniu</button>
-                        <button onClick={() => setMetal(-0.76)}>Zinc</button>
+                        <button className="butonasMetal" onClick={() => setMetal(-1.66)}>Aluminiu</button>
+                        <button className="butonasMetal" onClick={() => setMetal(-0.44)}>Fier</button>
+                        <button className="butonasMetal" onClick={() => setMetal(-2.37)}>Magneziu</button>
+                        <button className="butonasMetal" onClick={() => setMetal(-2.7)}>Na</button>
+                        <button className="butonasMetal" onClick={() => setMetal(-0.23)}>Nichel</button>
+                        <button className="butonasMetal" onClick={() => setMetal(-0.13)}>Plumb</button>
+                        <button className="butonasMetal" onClick={() => setMetal(-0.14)}>Staniu</button>
+                        <button className="butonasMetal" onClick={() => setMetal(-0.76)}>Zinc</button>
                     </ul>
                 </div>
 
