@@ -1,8 +1,3 @@
-//fut-er
-//
-//
-//
-//scuze
 function Footer(){
     return(
         <footer>

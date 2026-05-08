@@ -9,6 +9,9 @@ function Components() {
     const [metal, setMetal] = useState(-1)
     const [mediu, setMediu] = useState("-1")
 
+    //pt formule de calculat
+    const [a, setCoroz] = useState(0)
+
     //retinerea mesajului si a starii
     const [message, setMessage] = useState("")
     const [simulate, setSimulate] = useState(0)
@@ -23,11 +26,12 @@ function Components() {
     //formule
     const epsilonRef = 0.266;
 
-    const [a, setCoroz] = useState(0)
 
     //aflarea mesajului si a starii corecte
     const handleSimulation = () => {
         let error = "";
+        let cor=0;
+
         setSimulate(0);
 
         //metalul nu a fost selectat
@@ -53,13 +57,12 @@ function Components() {
 
         //toti parametrii au fost selectati
         if (error == "") {
-            //setSimulate(1)
+            setSimulate(1)
             setMessage("")
 
             //formulele aici
-            
-            setCoroz(epsilonRef + volt)
-
+            cor= epsilonRef - volt;
+            setCoroz(cor)
         }
 
         //daca nu au fost selectati
@@ -150,7 +153,8 @@ function Components() {
                         </tr>
                         <tr>
                             <td>{epsilonRef}</td>
-                            <td>{a}</td>
+                            {/*are prea multe zecimale*/}
+                            <td>{simulate == 1 ? a : "0"}</td>
                             <td>ceva</td>
                         </tr>
                     </thead>
