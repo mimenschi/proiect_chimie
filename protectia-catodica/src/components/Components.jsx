@@ -1,6 +1,7 @@
 import { Select } from "react-dropdown-select"
 import React, { useState } from "react"
 import Poza from '../assets/placehlder.png'
+import Voltmetru from '../assets/Voltmetrisor.png'
 
 function Components() {
 
@@ -109,8 +110,8 @@ function Components() {
 
 
             <div>
-                <img className="pozaExp" 
-                    src={Poza}
+                <img className="pozaVolt" 
+                    src={Voltmetru}
                     alt="Dynamic content"
                     
                 />
@@ -148,8 +149,8 @@ function Components() {
                 <table>
                     <thead>
                         <tr>
-                            <th>ref</th>
-                            <th>egasit</th>
+                            <th>Potential referinta</th>
+                            <th>Potential gasit</th>
                             <th>Este anod de sacrificiu?</th>
                         </tr>
                         <tr>

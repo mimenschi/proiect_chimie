@@ -182,10 +182,17 @@ body {
   border: slateblue;
 }
 
+.pozaVolt{
+  height: 300px;
+  width: 250px;
+  padding-left: 1000px;
+  padding-bottom: 400px;
+}
 
 
 /*Mediu Experiment*/
 .voltmetru {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -193,6 +200,9 @@ body {
   gap: 12px;
   margin-bottom: 25px;
   max-width: 200px;
+  padding-left: 1710px;
+  padding-top: 10px;
+  z-index: 2;
 }
 
 .textVoltmetru {
@@ -289,6 +299,31 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: #b3b2f1;
+}
+
+.results{
+  padding-left: 1020px;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 20px;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+}
+
+.results thead tr{
+  background-color: #c2bce7;
+  color: #ffffff;
+  text-align: left;
+  font-size: 20px;
+}
+
+.results td{
+  padding: 12px 15px;
+
+}
+
+.results tr{
+  border-bottom: 1px solid #ff0000dd;
 }
 
 .mediu {
