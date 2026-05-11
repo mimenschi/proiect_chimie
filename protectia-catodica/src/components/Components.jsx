@@ -11,6 +11,7 @@ function Components() {
 
     //pt formule de calculat
     const [a, setCoroz] = useState(0)
+    const [anod,setAnod] = useState("-")
 
     //retinerea mesajului si a starii
     const [message, setMessage] = useState("")
@@ -120,14 +121,14 @@ function Components() {
                 <div className="metals">
                     <p className="textMetal">Selectează metalul</p>
                     <ul>
-                        <button className="butonasMetal" onClick={() => setMetal(-1.66)}>Aluminiu</button>
-                        <button className="butonasMetal" onClick={() => setMetal(-0.44)}>Fier</button>
-                        <button className="butonasMetal" onClick={() => setMetal(-2.37)}>Magneziu</button>
-                        <button className="butonasMetal" onClick={() => setMetal(-2.7)}>Sodiu</button>
-                        <button className="butonasMetal" onClick={() => setMetal(-0.23)}>Nichel</button>
-                        <button className="butonasMetal" onClick={() => setMetal(-0.13)}>Plumb</button>
-                        <button className="butonasMetal" onClick={() => setMetal(-0.14)}>Staniu</button>
-                        <button className="butonasMetal" onClick={() => setMetal(-0.76)}>Zinc</button>
+                        <button className="butonasMetal" onClick={() => {setMetal(-1.66),setAnod("Da")}}>Aluminiu</button>
+                        <button className="butonasMetal" onClick={() => {setMetal(0),setAnod("Nu")}}>Argint</button>
+                        <button className="butonasMetal" onClick={() => {setMetal(-2.37),setAnod("Da")}}>Magneziu</button>
+                        <button className="butonasMetal" onClick={() => {setMetal(-2.7),setAnod("Da")}}>Sodiu</button>
+                        <button className="butonasMetal" onClick={() => {setMetal(-0.23),setAnod("Nu")}}>Nichel</button>
+                        <button className="butonasMetal" onClick={() => {setMetal(-0.13),setAnod("Nu")}}>Plumb</button>
+                        <button className="butonasMetal" onClick={() => {setMetal(-0.14),setAnod("Nu")}}>Staniu</button>
+                        <button className="butonasMetal" onClick={() => {setMetal(-0.76),setAnod("Da")}}>Zinc</button>
                     </ul>
                 </div>
 
@@ -149,13 +150,13 @@ function Components() {
                         <tr>
                             <th>ref</th>
                             <th>egasit</th>
-                            <th>ceva</th>
+                            <th>Este anod de sacrificiu?</th>
                         </tr>
                         <tr>
                             <td>{epsilonRef}</td>
                             {/*are prea multe zecimale*/}
                             <td>{simulate == 1 ? a : "0"}</td>
-                            <td>ceva</td>
+                            <td>{anod}</td>
                         </tr>
                     </thead>
 
