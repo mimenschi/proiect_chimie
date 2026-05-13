@@ -8,21 +8,21 @@ function Components() {
     //retinerea inputului
     const [volt, setVolt] = useState("")
     const [metal, setMetal] = useState(-1)
-    const [mediu, setMediu] = useState("-1")
+    const [electrod, setElectrod] = useState("-")
 
     //pt formule de calculat
     const [a, setCoroz] = useState(0)
-    const [anod,setAnod] = useState("-")
+    const [anod, setAnod] = useState("-")
 
     //retinerea mesajului si a starii
     const [message, setMessage] = useState("")
     const [simulate, setSimulate] = useState(0)
 
-    //MEDIU
+    //ELECTROD
     const options = [
-        { label: "Bază", value: "0.401" },
-        { label: "Acid", value: "0 " },
-        { label: "Neutru", value: "0.401 " },
+        { label: "Ag/AgCl", value: "0.266" },
+        { label: "Pt/H₂", value: "0 " },
+        { label: "Hg/Hg₂Cl₂", value: "0.244 " },
     ];
 
     //formule
@@ -32,30 +32,29 @@ function Components() {
     //aflarea mesajului si a starii corecte
     const handleSimulation = () => {
         let error = "";
-        let cor=0;
+        let cor = 0;
 
         setSimulate(0);
 
         //metalul nu a fost selectat
-        if (metal == -1 && volt != "" && mediu != -1) {
+        if (metal == -1 && volt != "" && electrod != "-") {
             error = "Selectează un metal!"
         }
 
-        //mediul nu a fost selectat
-        if (mediu == -1 && metal != -1 && volt != "") {
-            error = "Selectează un mediu!"
+        //electrodul nu a fost selectat
+        if (electrod == "-" && metal != -1 && volt != "") {
+            error = "Selectează un electrod!"
         }
 
         //voltajul nu a fost selectat 
-        if (volt == "" && mediu != -1 && metal != -1) {
+        if (volt == "" && electrod != "-" && metal != -1) {
             error = "Selectează voltajul!"
         }
 
         //doi sau trei parametrii nu au fost selectati 
-        if (volt == "" && mediu < 0 || (volt == "" && metal == -1)
-            || metal + mediu == -2 ||
-            (volt == "" && mediu + metal == -2)) 
-                { error = "Selectează toți parametrii!" }
+        if (volt == "" && electrod == "-" || (volt == "" && metal == -1)
+            || metal == -1 && electrod == "-" ||
+            (volt == "" && metal == -1 && electrod == "-")) { error = "Selectează toți parametrii!" }
 
         //toti parametrii au fost selectati
         if (error == "") {
@@ -63,7 +62,7 @@ function Components() {
             setMessage("")
 
             //formulele aici
-            cor= epsilonRef - volt;
+            cor = electrod - volt;
             setCoroz(cor)
         }
 
@@ -92,44 +91,45 @@ function Components() {
             </div>
 
 
-            {/*MEDIU SI METALE*/}
+            {/*ELECTROD SI METALE*/}
 
             <div className="mediu-metale">
 
-                {/*MEDIU*/}
+                {/*ELECTROD*/}
 
                 <div className="mediu">
                     <Select
-                        name="Selectează mediul"
+                        name="Selectează electrodul"
                         options={options}
                         searchable={false}
-                        onChange={(values) => setMediu(values[0]?.value)}
+                        onChange={(values) => setElectrod(values[0]?.value)}
                         required
                     />
                 </div>
 
 
-            <div>
-                <img className="pozaVolt" 
-                    src={Voltmetru}
-                    alt="Dynamic content"
-                    
-                />
-            </div>
+                <div>
+                    <img className="pozaVolt"
+                        src={Voltmetru}
+                        alt="Dynamic content"
+
+                    />
+                </div>
 
                 {/*METALE*/}
 
                 <div className="metals">
                     <p className="textMetal">Selectează metalul</p>
                     <ul>
-                        <button className="butonasMetal" onClick={() => {setMetal(-1.66),setAnod("Da")}}>Aluminiu</button>
-                        <button className="butonasMetal" onClick={() => {setMetal(0),setAnod("Nu")}}>Argint</button>
-                        <button className="butonasMetal" onClick={() => {setMetal(-2.37),setAnod("Da")}}>Magneziu</button>
-                        <button className="butonasMetal" onClick={() => {setMetal(-2.7),setAnod("Da")}}>Sodiu</button>
-                        <button className="butonasMetal" onClick={() => {setMetal(-0.23),setAnod("Nu")}}>Nichel</button>
-                        <button className="butonasMetal" onClick={() => {setMetal(-0.13),setAnod("Nu")}}>Plumb</button>
-                        <button className="butonasMetal" onClick={() => {setMetal(-0.14),setAnod("Nu")}}>Staniu</button>
-                        <button className="butonasMetal" onClick={() => {setMetal(-0.76),setAnod("Da")}}>Zinc</button>
+                        <button className="butonasMetal" onClick={() => { setMetal(-2.1), setAnod("Da") }}>Aluminiu</button>
+                        <button className="butonasMetal" onClick={() => { setMetal(0.35), setAnod("Nu") }}>Argint</button>
+                        <button className="butonasMetal" onClick={() => { setMetal(-0.09), setAnod("Nu") }}>Cupru</button>
+                        <button className="butonasMetal" onClick={() => { setMetal(-2.81), setAnod("Da") }}>Magneziu</button>
+                        <button className="butonasMetal" onClick={() => { setMetal(-3.14), setAnod("Da") }}>Sodiu</button>
+                        <button className="butonasMetal" onClick={() => { setMetal(-0.67), setAnod("Nu") }}>Nichel</button>
+                        <button className="butonasMetal" onClick={() => { setMetal(-0.57), setAnod("Nu") }}>Plumb</button>
+                        <button className="butonasMetal" onClick={() => { setMetal(-0.58), setAnod("Nu") }}>Staniu</button>
+                        <button className="butonasMetal" onClick={() => { setMetal(-1.2), setAnod("Da") }}>Zinc</button>
                     </ul>
                 </div>
 
@@ -149,12 +149,13 @@ function Components() {
                 <table>
                     <thead>
                         <tr>
-                            <th>Potential referinta</th>
-                            <th>Potential gasit</th>
+                            <th>Potențial referință</th>
+                            <th>Potențialul
+                                sistemului metalic</th>
                             <th>Este anod de sacrificiu?</th>
                         </tr>
                         <tr>
-                            <td>{epsilonRef}</td>
+                            <td>{electrod}</td>
                             {/*are prea multe zecimale*/}
                             <td>{simulate == 1 ? a : "0"}</td>
                             <td>{anod}</td>
