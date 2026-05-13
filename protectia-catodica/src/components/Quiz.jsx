@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+import "./QuizStyle.css"
+
 function Quiz() {
     //intrebarile
     const questionsData = [
