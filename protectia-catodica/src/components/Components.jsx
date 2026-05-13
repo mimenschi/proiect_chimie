@@ -74,21 +74,6 @@ function Components() {
 
     return (
         <div>
-            {/*VOLTMETRU*/}
-
-            <div className="voltmetru">
-                <form>
-                    <label className="textVoltmetru">Voltmetru</label>
-                    <input
-                        type="number"
-                        step="0.01"
-                        min="0"
-                        max="15"
-                        value={volt}
-                        onChange={(e) => setVolt(e.target.value)}
-                    />
-                </form>
-            </div>
 
 
             {/*ELECTROD SI METALE*/}
@@ -107,14 +92,33 @@ function Components() {
                     />
                 </div>
 
+                <div className="containerVolt">
+                    {/*VOLTMETRU*/}
 
-                <div>
+                    <div className="voltmetru">
+                        <form>
+                            <label className="textVoltmetru">Voltmetru</label>
+                            <input
+                                type="number"
+                                step="0.01"
+                                min="0"
+                                max="15"
+                                value={volt}
+                                onChange={(e) => setVolt(e.target.value)}
+                            />
+                        </form>
+                    </div>
+
                     <img className="pozaVolt"
                         src={Voltmetru}
                         alt="Dynamic content"
 
                     />
+
                 </div>
+
+
+                
 
                 {/*METALE*/}
 

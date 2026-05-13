@@ -10,6 +10,7 @@ import Rocky from './site/Rocky.jsx'
 import Mj from './site/Mj.jsx'
 import Navbar from './site/Navbar.jsx'
 import Protectia from './pages/Protectia.jsx'
+import Quiz from './components/Quiz.jsx'
 
 function App() {
   return(
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Protectia />} />
             <Route path="/teorie" element={<Teorie />} />
             <Route path="/experiment" element={<Experiment />} />
+            <Route path="/quiz" element={<Quiz />}/>
           </Routes>
         </div>
       </>

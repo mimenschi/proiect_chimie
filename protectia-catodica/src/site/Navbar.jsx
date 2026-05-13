@@ -30,6 +30,10 @@ function Navbar() {
                 to="/teorie" 
                 className="butonasDom">Teorie
             </NavLink>
+                <NavLink
+                to="/quiz"
+                className="butonasDom">Quiz
+                </NavLink>
             </div>
         </nav>
     );
