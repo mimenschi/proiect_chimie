@@ -159,9 +159,10 @@ function Quiz() {
                     <div className="question-counter">
                         <h3>Întrebarea {currentQuestion + 1}:</h3>
                         <h2>{questions[currentQuestion].question}</h2>
-                        <div className="quiz-options">
+                        <div >
                             {questions[currentQuestion].options.map((option, index) =>
-                            (<button
+                            (<button 
+                                className={`quiz-options ${answered ? (index === selectedAnswer ? "selected" : "dimmed") : ""}`}
                                 key={index}
                                 onClick={() => handleAnswer(option.isCorrect, index)}
                                 disabled={answered}>
