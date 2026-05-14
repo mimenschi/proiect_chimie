@@ -138,42 +138,6 @@ body {
   top: 0;
 }
 
-
-
-/*COMPONENTE TEXT*/
-
-.titlu{
-  text-align: left;
-  padding-left: 10px;
-}
-
-
-.textTeorie{
-  line-height: 30px;
-  font-size: larger;
-  font-weight: 500;
-  word-spacing: 0.5px;
-  text-align: left;
-  padding-left: 10px;
-  padding-right: 5px;
-}
-
-
-.textReactii{
-  padding-left: 10px;
-  text-align: left;
-  font-size: large;
-  font-weight: 500;
-  color: white;
-}
-
-.titluReactie{
-  text-align: center;
-  font-size: larger;
-  font-weight: 600;
-  color: white;
-}
-
 /*IMAGE STYLE*/
 
 .poza {
