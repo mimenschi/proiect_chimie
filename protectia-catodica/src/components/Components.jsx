@@ -38,23 +38,23 @@ function Components() {
 
         //metalul nu a fost selectat
         if (metal == -1 && volt != "" && electrod != "-") {
-            error = "Selectează un metal!"
+            error = "⚠️Selectează un metal!⚠️"
         }
 
         //electrodul nu a fost selectat
         if (electrod == "-" && metal != -1 && volt != "") {
-            error = "Selectează un electrod!"
+            error = "⚠️Selectează un electrod!⚠️"
         }
 
         //voltajul nu a fost selectat 
         if (volt == "" && electrod != "-" && metal != -1) {
-            error = "Selectează voltajul!"
+            error = "⚠️Selectează voltajul!⚠️"
         }
 
         //doi sau trei parametrii nu au fost selectati 
         if (volt == "" && electrod == "-" || (volt == "" && metal == -1)
             || metal == -1 && electrod == "-" ||
-            (volt == "" && metal == -1 && electrod == "-")) { error = "Selectează toți parametrii!" }
+            (volt == "" && metal == -1 && electrod == "-")) { error = "⚠️Selectează toți parametrii!⚠️" }
 
         //toti parametrii au fost selectati
         if (error == "") {
@@ -83,6 +83,7 @@ function Components() {
                 {/*ELECTROD*/}
 
                 <div className="mediu">
+                    <label className="numeBara">Selectează electrodul</label>
                     <Select
                         name="Selectează electrodul"
                         options={options}
@@ -117,9 +118,6 @@ function Components() {
 
                 </div>
 
-
-                
-
                 {/*METALE*/}
 
                 <div className="metals">
@@ -150,18 +148,21 @@ function Components() {
 
             {/*REZULTATE */}
             <div className="results">
+                <h3>Rezultate</h3>
                 <table>
                     <thead>
                         <tr>
-                            <th>Potențial referință</th>
+                            <th>Potențial mediului</th>
                             <th>Potențialul
                                 sistemului metalic</th>
+                            <th>Potențial de referință</th>
                             <th>Este anod de sacrificiu?</th>
                         </tr>
                         <tr>
                             <td>{electrod}</td>
                             {/*are prea multe zecimale*/}
                             <td>{simulate == 1 ? a : "0"}</td>
+                            <td>Ala al fierului gol</td>
                             <td>{anod}</td>
                         </tr>
                     </thead>
