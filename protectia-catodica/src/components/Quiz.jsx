@@ -145,15 +145,17 @@ function Quiz() {
             {/*afisarea rezultatelor:output rezultate:intrebarea curenta*/}
             {finish ? (
                 <div className="finishedQuiz">
-                    <h2>Test finalizat!</h2>
-                    <div className="score">
-                        <p className="score-text">
-                            Ai obținut {score}/{questionsData.length}!
-                        </p>
+                    <div className="cutie-rezultate">
+                        <h2>Test finalizat!</h2>
+                        <div className="score">
+                            <p className="score-text">
+                                Ai obținut {score}/{questionsData.length}!
+                            </p>
+                        </div>
+                        <button className="restart-quiz-button" onClick={handleRestart}>
+                            Repetă testul
+                        </button>
                     </div>
-                    <button className="restart-quiz-button" onClick={handleRestart}>
-                        Repetă testul
-                    </button>
                 </div>
             ) : (
                     < div className="quiz-inprogress">
