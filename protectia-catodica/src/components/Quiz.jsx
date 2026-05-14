@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import "./QuizStyle.css"
+import Footer from "../site/Footer"
 
 function Quiz() {
     //intrebarile
@@ -155,29 +156,34 @@ function Quiz() {
                     </button>
                 </div>
             ) : (
-                < div className="quiz-inprogress">
-                    <div className="question-counter">
-                        <h3>Întrebarea {currentQuestion + 1}:</h3>
-                        <h2>{questions[currentQuestion].question}</h2>
-                        <div >
-                            {questions[currentQuestion].options.map((option, index) =>
-                            (<button 
-                                className={`quiz-options ${answered ? (index === selectedAnswer ? "selected" : "dimmed") : ""}`}
-                                key={index}
-                                onClick={() => handleAnswer(option.isCorrect, index)}
-                                disabled={answered}>
-                                <span className="options-quiz">{option.text}</span>
-                            </button>
-                            ))}
+                    < div className="quiz-inprogress">
+                        <div className="cutie-quiz">
+                            <div className="question-counter">
+                                <h3>Întrebarea {currentQuestion + 1}:</h3>
+                                <h2>{questions[currentQuestion].question}</h2>
+                                <div >
+                                    {questions[currentQuestion].options.map((option, index) =>
+                                    (<button
+                                        className={`quiz-options ${answered ? (index === selectedAnswer ? "selected" : "dimmed") : ""}`}
+                                        key={index}
+                                        onClick={() => handleAnswer(option.isCorrect, index)}
+                                        disabled={answered}>
+                                        <span className="options-quiz">{option.text}</span>
+                                    </button>
+                                    ))}
+                                </div>
+                            </div>
+                            {(
+                                <button 
+                                    className="button-next" 
+                                    onClick={nextQuestion}
+                                    disabled={!answered}>
+                                    {currentQuestion === (questions.length - 1) ? "Vezi rezultatul" : "Următoarea întrebare"}
+                                </button>)}
                         </div>
                     </div>
-
-                    {answered && (
-                        <button className="button-next" onClick={nextQuestion}>
-                            {currentQuestion === (questions.length - 1) ? "Vezi rezultatul" : "Următoarea întrebare"}
-                        </button>)}
-                </div >
             )}
+            <Footer />
         </div>
     );
 };

@@ -3,6 +3,7 @@
     flex-direction: column; 
     align-items: center;    
     width: 100%;
+    gap: 10px;
 }
 
 .quiz-options{
@@ -27,7 +28,6 @@
 
 .quiz-options:not(:disabled):hover {
     transform: scale(1.03);
-    background-color: #444;
 }
 
 .quiz-options.selected {
@@ -45,6 +45,7 @@
 
 .button-next{
     color: #fff;
+    width: 250px;
     margin: 10px;
     font-size: x-large;
     font-weight: 700;
@@ -55,4 +56,59 @@
 .button-next:hover{
     transform: scale(1.05);
     transition-duration: 0.5ms;
+}
+
+.button-next:disabled{
+    opacity: 0.3; 
+    filter: grayscale(80%);
+}
+
+.finishedQuiz{
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: x-large;
+}
+
+
+.score-text{
+    display: flex;
+    justify-content: center;
+    font-size:xx-large;
+    font-weight: 600;
+}
+
+.restart-quiz-button{
+    background-color: #615FFF;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.quiz-inprogress{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh; 
+    width: 100%;
+}
+
+.cutie-quiz{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 25px;
+    padding: 40px;
+    width: 90%;
+    max-width: 850px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
