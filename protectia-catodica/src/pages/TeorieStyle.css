@@ -2,57 +2,84 @@
 
 
 /*REACTII*/
-.reactii-bula{
+.reactii-bula {
+    text-align: center;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-left: 6px solid #836cd5;
     border-radius: 12px;
-    padding: 20px;
-    margin: 20px 10%;
+    padding: 20px 40px;
+    width: 95%;
+    max-width: 1000px;
+    min-width: 500px;
+    margin: 25px auto;
     box-shadow: 0 4px 12px #ddddddf1;
 }
 
-.titlu{
-  text-align: center;
-  padding-left: 10%;
-  font-family: "Nunito";
-  font-size: 2rem;
-  color: #8bc2ca;
-}
 
-.titluReactie{
-  text-align: left;
-  padding-left: 10%;
-  font-size: larger;
-  font-weight: 600;
-  font-family: "Nunito";
-  color: rgb(255, 255, 255);
-  margin-top: 20px;
+.reactii {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
 
-.textTeorie{
-  line-height: 30px;
-  font-size: larger;
-  font-weight: 500;
-  font-family: "Nunito";
-  word-spacing: 0.5px;
-  text-align: left;
-  padding-left: 10px;
-  padding-right: 5px;
+.titlu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Nunito";
+    font-size: 2rem;
+    color: #8bc2ca;
+}
+
+.titluReactie {
+    text-align: left;
+    align-items: center;
+    font-size: larger;
+    font-weight: 600;
+    font-family: "Nunito";
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
 }
 
 
-.textReactii{
-  padding-left: 10px;
-  /*text-align: left;*/
-  font-size: large;
-  font-family: "Nunito";
-  font-weight: 500;
-  color: rgba(53, 82, 141, 0.594);
+.textTeorie {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    line-height: 30px;
+    font-size: x-large;
+    font-weight: 500;
+    font-family: "Nunito";
+    word-spacing: 0.5px;
+    text-align: left;
 }
 
-pre{
+.textEnumerate {
+    line-height: 30px;
+    font-size: x-large;
+    font-weight: 500;
+    font-family: "Nunito";
+    word-spacing: 0.5px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+
+.textReactii {
+    text-align: center;
+    font-size: large;
+    font-family: "Nunito";
+    font-weight: 500;
+    color: rgba(53, 82, 141, 0.594);
+}
+
+pre {
     background-color: #f8f9fab7;
     padding: 15px;
     border-radius: 6px;
@@ -62,29 +89,50 @@ pre{
     overflow-x: auto;
 }
 
+.cutie-teorie {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 25px;
+    padding: 50px;
+    width: 90%;
+    max-width: 850px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 
 /*TABEL*/
 
-.table-container{
+.table-container {
     margin: 40px auto;
     width: 90%;
     max-width: 800px;
     border-radius: 15px;
     overflow: hidden;
     border: 1px solid #ddd;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-table{
+
+table {
     background-color: antiquewhite;
     border-collapse: collapse;
     width: 100%;
 }
 
-thead tr{
+thead tr {
     background-color: #9e3838;
 }
 
-thead th{
+tbody {
+    pointer-events: none;
+}
+
+thead th {
     color: white;
     padding: 18px;
     font-size: 1.2rem;
@@ -92,7 +140,8 @@ thead th{
     font-weight: bold;
     text-align: center;
 }
-tbody td{
+
+tbody td {
     padding: 12px;
     text-align: center;
     color: aliceblue;
@@ -102,10 +151,10 @@ tbody td{
     border-bottom: 1px solid #ccc;
 }
 
-tbody tr:last-child td{
+tbody tr:last-child td {
     border-bottom: none;
 }
 
-tbody tr:hover{
+tbody tr:hover {
     background-color: #7fa8ce;
 }

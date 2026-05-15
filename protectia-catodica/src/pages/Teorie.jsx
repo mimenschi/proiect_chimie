@@ -7,7 +7,13 @@ function Teorie() {
   return (
     <>
       <h2 className='titlu'>Mecanismul</h2>
-      <p>Protecția catodică cu anozi de sacrificiu reprezintă o metodă electrochimică de prevenire a coroziunii prin care potențialul sistemului metalic este deplasat spre valori negative, inhibând astfel procesele oxidative. Această metodă implică fixarea pe suprafața structurii a unor anozi activi, alcătuiți din metale sau aliaje care posedă un potențial de coroziune mai negativ decât cel al metalului protejat în mediul respectiv.</p>
+      <div >
+        <p className="textTeorie">Protecția catodică cu anozi de sacrificiu reprezintă o metodă electrochimică de prevenire a coroziunii prin
+          care potențialul sistemului metalic este deplasat spre valori negative, inhibând astfel procesele oxidative. Această metodă implică
+          fixarea pe suprafața structurii a unor anozi activi, alcătuiți din metale sau aliaje care posedă un potențial de coroziune mai negativ decât cel al
+          metalului protejat în mediul respectiv.
+        </p>
+      </div>
 
       <div className='reactii'>
         <h2 className='titlu'>Reacții chimice:</h2>
@@ -55,29 +61,33 @@ function Teorie() {
 
         <h2 className='titlu'>Aparatura și substanțele necesare</h2>
         <ul>
-          <li>Electrozi de fier, cupru, zinc, sau alte metale</li>
-          <li>Electrodul de referință</li>
-          <li>Voltmetru</li>
-          <li>Medii corozive (acid, bază, neutru)</li>
-          <li>Hârtie de șmirgel</li>
+          <li className="textTeorie">Electrozi de fier, cupru, zinc, sau alte metale</li>
+          <li className="textTeorie">Electrodul de referință</li>
+          <li className="textTeorie">Voltmetru</li>
+          <li className="textTeorie">Medii corozive (acid, bază, neutru)</li>
+          <li className="textTeorie">Hârtie de șmirgel</li>
         </ul>
 
         <h2 className='titlu'>Mod de lucru</h2>
         <ol>
-          <li>Se curăţă electrozii cu hârtie de şmirghel înaintea fiecărei măsurători</li>
-          <li>Se alcătuiesc următoarele pile galvanice de coroziune:
-            <pre>Fe/mediu coroziv//electrod de referinţă</pre>
-            <pre>Fe+M /mediu coroziv//electrod de referinţă</pre>
-            unde: <b><i>M - Zn, Al, Cu</i></b> sau alt metal iar mediul coroziv: <b><i>NaCl 1%, NaOH 0,1N, H2SO4 0,1N</i></b>
+          <li className="textTeorie">Se curăţă electrozii cu hârtie de şmirghel înaintea fiecărei măsurători</li>
+          <li className="textTeorie">Se alcătuiesc următoarele pile galvanice de coroziune:
+            <div div className='reactii-bula'>
+              <div className='textReactii'>
+                <pre>Fe/mediu coroziv//electrod de referinţă</pre>
+                <pre>Fe+M /mediu coroziv//electrod de referinţă</pre>
+              </div>
+            </div>
+            unde: <b><i>M - Zn, Al, Cu</i></b> sau alt metal iar mediul coroziv: <b><i>NaCl 1%, NaOH 0,1N, H2SO4 0,1N. </i></b>
             Pilele galvanice de mai sus se realizează introducând electrodul de Fe şi electrodul de
             referinţă în vasul conţinând soluţia corozivă.</li>
-          <li>Se leagă electrozii pilei electrice la bornele aparatului de măsură, astfel încât t.e.m. să fie pozitivă. </li>
+          <li className="textTeorie">Se leagă electrozii pilei electrice la bornele aparatului de măsură, astfel încât t.e.m. să fie pozitivă. </li>
         </ol>
 
         <h2 className='titlu'>Formule necesare experimentului</h2>
-        <p>&epsilon;<sub>sis.met.</sub> = &epsilon;<sub>Fe</sub> + &epsilon;<sub>M</sub></p>
-        <p>E<sub>exp</sub> = &epsilon;<sub>ref</sub> - &epsilon;<sub>sis.met.</sub></p>
-        <p>&epsilon;<sub>sis. met.</sub> = &epsilon;<sup>0</sup> - E<sub>exp</sub></p>
+        <p className="textEnumerate">&epsilon;<sub>sis.met.</sub> = &epsilon;<sub>Fe</sub> + &epsilon;<sub>M</sub></p>
+        <p className="textEnumerate">E<sub>exp</sub> = &epsilon;<sub>ref</sub> - &epsilon;<sub>sis.met.</sub></p>
+        <p className="textEnumerate">&epsilon;<sub>sis. met.</sub> = &epsilon;<sup>0</sup> - E<sub>exp</sub></p>
 
         <h2 className='titlu'>Constante utilizate</h2>
         <div class="table-container">
@@ -158,7 +168,7 @@ function Teorie() {
         </div>
 
         <h2 className='titlu'>Interpretarea rezultatelor</h2>
-        <p>
+        <p className="textTeorie">
           Un metal <b><i>M</i></b> este considerat anod de sacrificiu pentru fier dacă potențialul sistemului asociat <b><i>Fe+M</i></b> este mai negativ decât potențialul fierului singur în acel mediu.
           Dacă potențialul este mai puțin negativ, metalul respectiv nu oferă protecție.
         </p>

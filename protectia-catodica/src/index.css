@@ -254,29 +254,7 @@ body {
   font-size: 24px;
 }
 
-.results{
-  margin: 40px auto;
-  width: fit-content;
-  border-collapse: collapse;
-  font-size: 20px;
-  min-width: 400px;
-  border-radius: 5px 5px 0 0;
-}
 
-.results thead tr{
-  background-color: #c2bce7;
-  color: #ffffff;
-  text-align: left;
-  font-size: 20px;
-}
-
-.results td{
-  padding: 12px 15px;
-}
-
-.results tr{
-  border-bottom: 1px solid #ff0000dd;
-}
 
 .mediu {
   width: 400px;
@@ -310,10 +288,17 @@ body {
 
 
 .simulare{
+  cursor: pointer;
   padding: 20px 55px;
   font-size: 30px;
   background-color: #615FFF;
   border-radius: 10px;
+}
+
+
+.simulare:hover{
+    transform: scale(1.05);
+    transition-duration: 0.5ms;
 }
 
 .butonSimulate{
@@ -325,6 +310,8 @@ body {
   margin-top: 50px;
   cursor: pointer;
 }
+
+
 
 .buttonSimulate p {
   margin-top: 20px;     
@@ -402,7 +389,42 @@ body {
 
 /*TABEL AFISARE DATE*/
 
+table.results{
+  margin: 40px auto;
+  width: fit-content;
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 10px;
+  font-size: 20px;
+  min-width: 400px;
+}
 
+table.results thead tr{
+  background-color: #341bd1;
+  border: 1px solid black;
+  color: #ffffff;
+  text-align: left;
+  font-size: 20px;
+}
+
+table.results td,th{
+  color: #2916b8;
+  font-size: larger;
+  font-weight: 600;
+  border: 1px solid black;
+  padding: 12px 15px;
+}
+
+table.results tbody tr td {
+    background-color: #b3caccdf;
+    color: #2916b8;          
+}
+
+tbody{
+  pointer-events: none;
+}
+
+/*--------------------------------------------------------*/
 
 
 
