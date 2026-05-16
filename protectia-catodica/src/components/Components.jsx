@@ -13,6 +13,7 @@ function Components() {
     //pt formule de calculat
     const [a, setCoroz] = useState(0)
     const [anod, setAnod] = useState("-")
+    const [tensiune, setTensiune] = useState(0);
 
     //retinerea mesajului si a starii
     const [message, setMessage] = useState("")
@@ -61,7 +62,15 @@ function Components() {
             setSimulate(1)
             setMessage("")
 
-            //formulele aici
+            //formulele 
+            //sistemul metalic
+            if (metal > -0.44)
+                metal = -0.44;
+
+            //tensiunea reala
+            let ten=electrod -metal;
+            setTensiune(ten);
+
             cor = electrod - volt;
             setCoroz(cor)
         }
