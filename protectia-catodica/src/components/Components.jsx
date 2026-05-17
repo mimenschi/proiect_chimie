@@ -14,7 +14,7 @@ function Components() {
     //pt formule de calculat
     const [a, setCoroz] = useState(0)
     const [anod, setAnod] = useState("-")
-    const [tensiune, setTensiune] = useState(0);
+    const [tensiuneReala, setTensiuneReala] = useState(0);
 
     //retinerea mesajului si a starii
     const [message, setMessage] = useState("")
@@ -35,8 +35,48 @@ function Components() {
     const handleSimulation = () => {
         let error = "";
         let cor = 0;
+        let tensiuneReala=0;
 
         setSimulate(0);
+
+        //sistemul metalic
+        if (metal == -1.66 && electrod == 0.266 && (volt >= 0.6 && volt <= 0.8))//Al + Ag/AgCl
+            tensiuneReala=1;
+        if (metal == -1.66 && electrod == 0.244 && (volt >= 0.55 && volt <= 0.75)) //Al + calomel
+            tensiuneReala=1;
+        if (metal == -1.66 && electrod == 0 && (volt >= 0.35 && volt <= 0.55)) //Al + H
+            tensiuneReala=1;
+
+        if ((metal == 0.8 || metal == 0.34 || metal == -0.26 || metal == -0.13 || metal == -0.14) && electrod == 0.266
+            && (volt >= 0.35 && volt <= 0.55)) //Ag/Cu/Ni/Pb/Sn  + Ag/AgCl
+            tensiuneReala=1;
+        if ((metal == 0.8 || metal == 0.34 || metal == -0.26 || metal == -0.13 || metal == -0.14) && electrod == 0.244
+            && (volt >= 0.3 && volt <= 0.5)) //Ag/Cu/Ni/Pb/Sn + calomel
+            tensiuneReala=1;
+        if ((metal == 0.8 || metal == 0.34 || metal == -0.26 || metal == -0.13 || metal == -0.14) && electrod == 0
+            && (volt >= 0.05 && volt <= 0.25)) //Ag/Cu/Ni/Pb/Sn + H
+            tensiuneReala=1;
+
+        if (metal == -2.37 && electrod == 0.266 && (volt >= 0.15 && volt <= 0.35)) //Mg+ Ag/AgCl
+            tensiuneReala=1;
+        if (metal == -2.37 && electrod == 0.244 && (volt >= 0.14 && volt <= 0.34)) //Mg + calomel
+            tensiuneReala=1;
+        if (metal == -2.37 && electrod == 0 && (volt >= 0.12 && volt <= 0.32)) //Mg + H
+            tensiuneReala=1;
+
+        if (metal == -2.37 && electrod == 0.266 && (volt >= 2.9 && volt <= 3.1)) //Na+ Ag/AgCl
+            tensiuneReala=1;
+        if (metal == -2.37 && electrod == 0.244 && (volt >= 2.75 && volt <= 2.95)) //Na + calomel
+            tensiuneReala=1;
+        if (metal == -2.37 && electrod == 0 && (volt >= 2.55 && volt <= 2.75)) //Na + H
+            tensiuneReala=1;
+
+        if (metal == -0.76 && electrod == 0.266 && (volt >= 1.1 && volt <= 1.3)) //Zn + Ag/AgCl
+            tensiuneReala=1;
+        if (metal == -0.76 && electrod == 0.244 && (volt >= 0.85 && volt <= 1.05)) //Zn + calomel
+            tensiuneReala=1;
+        if (metal == -0.76 && electrod == 0 && (volt >= 0.65 && volt <= 0.85)) //Zn+ H
+            tensiuneReala=1;
 
         //metalul nu a fost selectat
         if (metal == -1 && volt != "" && electrod != "-") {
@@ -53,6 +93,11 @@ function Components() {
             error = "⚠️Selectează voltajul!⚠️"
         }
 
+        //voltajul are o eroare prea mare
+        if(volt!="" && electrod!="-" && metal!=-1 && tensiuneReala==0){
+            error="⚠️Valoarea tensiunii nu se află în parametri!⚠️"
+        }
+
         //doi sau trei parametrii nu au fost selectati 
         if (volt == "" && electrod == "-" || (volt == "" && metal == -1)
             || metal == -1 && electrod == "-" ||
@@ -64,75 +109,13 @@ function Components() {
             setMessage("")
 
             //formulele 
-            //sistemul metalic
-            if (metal == -1.66 && electrod==0.266)//Al + Ag/AgCl
-                metal = 0.7;
-            if(metal == -1.66 && electrod==0.244) //Al + calomel
-                metal= 0.65;
-            if(metal==-1.66 && electrod ==0 ) //Al + H
-                metal=0.45;
-            
-            if(metal == 0.8 && electrod == 0.266) //Ag + Ag/AgCl
-                metal=0.45;
-            if(metal == 0.8 && electrod == 0.244) //Ag + calomel
-                metal=0.4;
-            if(metal == 0.8 && electrod == 0) //Ag + H
-                metal=0.15;
 
-            if(metal == 0.34 && electrod == 0.266) //Cu+ Ag/AgCl
-                metal=0.45;
-            if(metal == 0.34 && electrod == 0.244) //Cu + calomel
-                metal=0.4;
-            if(metal == 0.34 && electrod == 0) //Cu+ H
-                metal=0.15;
-
-            if(metal == -2.37 && electrod == 0.266) //Mg+ Ag/AgCl
-                metal=0.25;
-            if(metal == -2.37 && electrod == 0.244) //Mg + calomel
-                metal=0.24;
-            if(metal == -2.37 && electrod == 0) //Mg + H
-                metal=0.22;
-
-            if(metal == -2.37 && electrod == 0.266) //Na+ Ag/AgCl
-                metal=3;
-            if(metal == -2.37 && electrod == 0.244) //Na + calomel
-                metal=2.85;
-            if(metal == -2.37 && electrod == 0) //Na + H
-                metal=2.65;
-
-            if(metal == -0.26 && electrod == 0.266) //Ni+ Ag/AgCl
-                metal=0.45;
-            if(metal == -0.26 && electrod == 0.244) //Ni  + calomel
-                metal=0.4;
-            if(metal == -0.26 && electrod == 0) //Ni + H
-                metal=0.15;
-            
-            if(metal == -0.13 && electrod == 0.266) //Pb+ Ag/AgCl
-                metal=0.45;
-            if(metal == -0.13 && electrod == 0.244) //Pb  + calomel
-                metal=0.4;
-            if(metal == -0.13 && electrod == 0) //Pb + H
-                metal=0.15;
-
-            if(metal == -0.14 && electrod == 0.266) //Sn + Ag/AgCl
-                metal=0.45;
-            if(metal == -0.14 && electrod == 0.244) //Sn + calomel
-                metal=0.4;
-            if(metal == -0.14 && electrod == 0) //Sn + H
-                metal=0.15;
-
-            if(metal == -0.76 && electrod == 0.266) //Zn + Ag/AgCl
-                metal=1.2;
-            if(metal == -0.76 && electrod == 0.244) //Zn + calomel
-                metal=0.95;
-            if(metal == -0.76 && electrod == 0) //Zn+ H
-                metal=0.75;
 
 
 
             //tensiunea reala
-            let ten=electrod -metal;
-            setTensiune(ten);
+            //let ten=electrod -metal;
+            //setTensiune(ten);
 
             cor = electrod - volt;
             setCoroz(cor)
@@ -183,7 +166,7 @@ function Components() {
                     </div>
 
                     <img className="pozaExp"
-                        src={Experimentbg}
+                        src={Experiment}
                         alt="Dynamic content"
 
                     />
@@ -224,7 +207,7 @@ function Components() {
                 <table className="results">
                     <thead>
                         <tr>
-                            <th>unu</th>
+                            <th></th>
                             <th>Potențial mediului</th>
                             <th>Potențialul
                                 sistemului metalic</th>
@@ -234,7 +217,7 @@ function Components() {
                     </thead>
                     <tbody>
                         <tr>
-                            <th>Fe</th>
+                            <td>Fe</td>
                             <td>doi</td>
                             {/*are prea multe zecimale*/}
                             <td>trei</td>
@@ -244,12 +227,12 @@ function Components() {
                     </tbody>
                     <tbody>
                         <tr>
-                            <th>Fe + M</th>
+                            <td>Fe + M</td>
                             <td>{electrod}</td>
                             {/*are prea multe zecimale*/}
                             <td>{simulate == 1 ? metal : "0"}</td>
                             <td>{simulate == 1 ? -0.44 : "0"}</td>
-                            <td>{anod}</td>
+                            <td>{simulate == 1 ? anod : "-"}</td>
                         </tr>
                     </tbody>
                 </table>
