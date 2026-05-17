@@ -10,16 +10,16 @@ function Header() {
      return(
         <header>
             <h1 className="titlu">Scopul lucrării:</h1>
-            <p className="textTeorie fade-in-on-load"> Electrodul este un sistem electroneutru format dintr-un metal și soluția de electrolit. 
-            În medii corozive, reacțiile la interfața metal/soluție sunt ireversibile, 
-            generând spontan o diferență de potențial, adică potențialul de coroziune (εcor).
+            <p className="textTeorie fade-in-on-load"> Electrodul este un sistem electroneutru format din soluția de electrolit și dintr-un metal. 
+            În medii corozive, reacțiile la interfața metalului/soluției sunt ireversibile, 
+            generând spontan o diferență de potențial, adică potențialul de coroziune (ε<sub>cor</sub>).
             </p>
             <br />
             <p className="textTeorie fade-in-on-load">
             În această lucrarea experimentală se vor măsura cu un voltmetru
-            tensiunile electromotoare (t.e.m.) ale fierului neprotejat şi ale Zn, Al, Cu suprapuse pe rând pe
+            tensiunile electromotoare (t.e.m.) ale fierului neprotejat şi ale unor metale suprapuse pe rând pe
             fier faţă de electrodul de referinţă Ag/AgCl. Comparând semnele şi valorile potenţialului de
-            electrod al fierului şi al fierului legat cu Zn, Al şi Cu faţă de electrodul de referinţă se va pune
+            electrod al fierului şi al fierului legat de metal faţă de electrodul de referinţă, se va pune
             în evidenţă ce metale pot fi utilizate ca anozi de sacrificiu.
             </p>
             <h1 className="titlu">Motivație:</h1>

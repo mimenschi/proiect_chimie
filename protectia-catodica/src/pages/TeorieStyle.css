@@ -49,7 +49,7 @@
 /*REACTII*/
 .reactii-bula {
     text-align: center;
-    background-color: #ffffff;
+    background-color: #e2d4d4;
     border: 1px solid #ddd;
     border-left: 6px solid #836cd5;
     border-radius: 12px;
@@ -73,12 +73,13 @@
 
 
 .titlu {
+    margin-top: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: "Nunito";
     font-size: 2rem;
-    color: #8bc2ca;
+    color: #5e4dcc;
 }
 
 .titluReactie {
@@ -125,7 +126,7 @@
 }
 
 pre {
-    background-color: #f8f9fab7;
+    /*background-color: #e8d7d7;*/
     padding: 15px;
     border-radius: 6px;
     margin: 10px 0;
@@ -164,13 +165,13 @@ pre {
 }
 
 table {
-    background-color: antiquewhite;
+    background-color: rgb(240, 230, 217);
     border-collapse: collapse;
     width: 100%;
 }
 
 thead tr {
-    background-color: #9e3838;
+    background-color: #4216b4;
 }
 
 tbody {

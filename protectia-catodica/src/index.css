@@ -422,10 +422,11 @@ body {
 /*TABEL AFISARE DATE*/
 
 .results{
-  font-size: x-large;
+  font-size: xx-large;
   color: #8e8cf7;
-  margin-top: 2%;
+  margin-top: 3%;
   font-family: "Nunito";
+  border-radius: 5px;
 }
 
 
@@ -437,6 +438,7 @@ table.results{
   border-radius: 10px;
   font-size: 20px;
   min-width: 400px;
+  border-radius: 5px;
 }
 
 table.results thead tr{

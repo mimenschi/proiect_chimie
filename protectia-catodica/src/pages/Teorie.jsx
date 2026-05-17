@@ -119,7 +119,7 @@ function Teorie() {
                     </ol>
 
                     <h2 className='titlu scroll-reveal'>Formule necesare experimentului</h2>
-                    <p className="textEnumerate scroll-reveal">&epsilon;<sub>sis.met.</sub> = &epsilon;<sub>Fe</sub> + &epsilon;<sub>M</sub></p>
+                    <p className="textEnumerate scroll-reveal">ε<sub>sis.met.</sub> = &epsilon;<sub>Fe</sub> + &epsilon;<sub>M</sub></p>
                     <p className="textEnumerate scroll-reveal">E<sub>exp</sub> = &epsilon;<sub>ref</sub> - &epsilon;<sub>sis.met.</sub></p>
                     <p className="textEnumerate scroll-reveal">&epsilon;<sub>sis. met.</sub> = &epsilon;<sup>0</sup> - E<sub>exp</sub></p>
 
@@ -134,8 +134,8 @@ function Teorie() {
                             </thead>
                             <tbody>
                                 <tr><th>Fier</th><th>-0.44 V</th></tr>
-                                <tr><th>Aluminiu</th><th>-1.66</th></tr>
-                                <tr><th>Argint</th><th>0.8</th></tr>
+                                <tr><th>Aluminiu</th><th>-1.66 V</th></tr>
+                                <tr><th>Argint</th><th>0.8 V</th></tr>
                                 <tr><th>Cupru</th><th>0.34 V</th></tr>
                                 <tr><th>Magneziu</th><th>-2.37 V</th></tr>
                                 <tr><th>Sodiu</th><th>-2.7 V</th></tr>
