@@ -326,9 +326,6 @@ body {
 }
 /*BUTOANE NAVBAR STYLE*/
 
-.active {
-  background-color: #96b9f4;
-}
 
 /*Butonul de langa logo*/
 .butonasLogo {
@@ -390,7 +387,7 @@ body {
   position: relative;
 }
 
-.buttonasDom::after {
+.butonasDom::after {
     content: '';
     position: absolute;
     bottom: 15px; /* Adjust this to move the line up or down within your 30px padding */
@@ -400,19 +397,17 @@ body {
     background-color: #4a24d6; /* Matches your text color, change if you want a different bar color */
     border-radius: 2px;
     
-    /* Animation magic: starts scaled down to 0 (invisible) */
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
     transform-origin: center;
 }
 
-/* 2. When React Router applies the .active class, scale the line to full size */
-.buttonasDom.active::after {
+
+.butonasDom.active::after {
     transform: scaleX(1);
 }
 
-/* Optional: Smooth hover effect so it grows when you hover over a button */
-.buttonasDom:hover::after {
+.butonasDom:hover::after {
     transform: scaleX(1);
 }
 
