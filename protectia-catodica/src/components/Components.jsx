@@ -153,7 +153,7 @@ function Components() {
 
                     <div className="voltmetru">
                         <form>
-                            <label className="textVoltmetru">Voltmetru</label>
+                            <label className="textVoltmetru">Voltmetru(mV)</label>
                             <input
                                 type="number"
                                 step="0.01"
@@ -208,7 +208,7 @@ function Components() {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Potențial mediului</th>
+                            <th>Potențial electrodului</th>
                             <th>Potențialul
                                 sistemului metalic</th>
                             <th>Potențial de referință</th>
@@ -218,11 +218,11 @@ function Components() {
                     <tbody>
                         <tr>
                             <td>Fe</td>
-                            <td>doi</td>
+                            <td>{electrod}</td>
                             {/*are prea multe zecimale*/}
-                            <td>trei</td>
-                            <td>patru</td>
-                            <td>cinci</td>
+                            <td>Fe simplu in casuta 1</td>
+                            <td>Fe simplu in acid</td>
+                            <td>-</td>
                         </tr>
                     </tbody>
                     <tbody>

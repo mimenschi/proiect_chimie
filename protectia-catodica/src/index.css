@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -142,6 +145,8 @@ body {
 }
 
 .pozaExp{
+  margin-right: 15%;
+  border-radius: 30px;
   height: 700px;
   width: 700px;
 }
@@ -161,7 +166,7 @@ body {
   font-weight: 600;
   margin-right: 10px;
   font-size: 30px;
-  color: #7f78aa;
+  color: #8e8cf7;
   letter-spacing: 0.5px;
 }
 
@@ -208,6 +213,7 @@ body {
 }
 
 .textMetal {
+  color: #8e8cf7;
   font-size: 35px;
   text-align: center;
   margin-bottom: 15px;
@@ -228,6 +234,10 @@ body {
   border-radius: 10px;
 }
 
+.butonasMetal.selected{
+  color: #3498db;
+}
+
 .butonasMetal:hover {
   transform: scale(1.15);
   transition-duration: 0.5ms;
@@ -243,6 +253,7 @@ body {
 }
 
 .numeBara{
+  font-family: "Nunito";
   display: block;
   margin-bottom: 10px;
   font-weight: 700;
@@ -409,6 +420,14 @@ body {
 /*-----------------*/
 
 /*TABEL AFISARE DATE*/
+
+.results{
+  font-size: x-large;
+  color: #8e8cf7;
+  margin-top: 2%;
+  font-family: "Nunito";
+}
+
 
 table.results{
   margin: 40px auto;
