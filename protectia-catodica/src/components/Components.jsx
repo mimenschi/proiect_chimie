@@ -1,7 +1,8 @@
 import { Select } from "react-dropdown-select"
 import React, { useState } from "react"
 import Poza from '../assets/placehlder.png'
-import Voltmetru from '../assets/Voltmetrisor.png'
+import Experiment from '../assets/Experiment.png'
+import Experimentbg from '../assets/Experimentbg.png'
 
 function Components() {
 
@@ -119,8 +120,8 @@ function Components() {
                         </form>
                     </div>
 
-                    <img className="pozaVolt"
-                        src={Voltmetru}
+                    <img className="pozaExp"
+                        src={Experimentbg}
                         alt="Dynamic content"
 
                     />

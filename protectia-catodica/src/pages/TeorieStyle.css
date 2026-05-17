@@ -1,6 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 
+/* ── Scroll-reveal animation ── */
+/*
+  Elements start shifted down (translateY) and invisible.
+  When the IntersectionObserver adds .visible they slide up and fade in.
+  When .visible is removed (scroll back up) they return to the start state,
+  so the animation replays on the way back down.
+*/
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+    will-change: opacity, transform;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 /*REACTII*/
 .reactii-bula {
     text-align: center;

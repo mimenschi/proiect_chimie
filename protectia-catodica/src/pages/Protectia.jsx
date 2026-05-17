@@ -9,7 +9,6 @@ function Protectia(){
     return(
         <>
             <Header />
-            
             <Rocky />
             <Mj />
             <Footer />

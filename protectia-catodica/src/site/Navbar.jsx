@@ -1,13 +1,10 @@
 import React from "react"
-import Logo from '../assets/logoHM.png'
+import Logo from '../assets/logo.png'
 import { Link } from 'react-router-dom'
 import { NavLink } from "react-router-dom"
 
 function Navbar() {
     return (
-        //bg-slate-800 culoare pentru background
-        //shadow-lg umbra
-        //py si px sunt pixeli pe Ox si Oy
         <nav className="navbar">
             <Link to="/" className="butonasCeva">
                 <span className="butonasCeva">

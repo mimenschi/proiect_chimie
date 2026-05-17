@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import "./QuizStyle.css"
 import Footer from "../site/Footer"
 
 function Quiz() {
-    //intrebarile
     const questionsData = [
         {
             question: "Care este principiul fundamental al protecției catodice cu anozi de sacrificiu?",
@@ -73,8 +72,9 @@ function Quiz() {
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [answered, setAnswered] = useState(false);
     const [finish, setFinish] = useState(false);
+    // fade state: "in" | "out"
+    const [fadeState, setFadeState] = useState("in");
 
-    //amestecarea vectorului - fisher-yates
     const shuffle = (array) => {
         const newarray = [...array];
         for (let i = newarray.length - 1; i > 0; i--) {
@@ -84,67 +84,52 @@ function Quiz() {
         return newarray;
     };
 
-    //restart quiz
     const handleRestart = () => {
-        //se amesteca optiunile si inrebarile
         const afterQuestions = questionsData.map((question) => ({
             ...question,
             options: shuffle(question.options)
         }));
         setQuestions(shuffle(afterQuestions));
-
-        //se reseteaza starile
         setCurrentQuestion(0);
         setSelectedAnswer(null);
         setAnswered(false);
         setScore(0);
         setFinish(false);
+        setFadeState("in");
     };
 
-    //amestecarea intrebarilor si a raspunsurilor la inceput de quiz
-    //+setarea starilor caracteristice inceputului de quiz
     useEffect(() => {
         handleRestart();
     }, []);
 
-    //cand se apasa un raspuns
     const handleAnswer = (isCorrect, index) => {
-        //pentru a evita trisatul
-        if(answered) 
-            return;
-        //se inregistreaza inputul
+        if (answered) return;
         setSelectedAnswer(index);
         setAnswered(true);
-
-        //se verifica daca inputul este corect
-        if (isCorrect) {
-            //daca inputul este cel corect, se incrementeaza score-ul
-            setScore(score + 1);
-        }
-
+        if (isCorrect) setScore(prev => prev + 1);
     };
 
-    //mergi la urmatoarea intrebare
+    // Fade out → update state → fade in
     const nextQuestion = () => {
-        const nextQuestion = currentQuestion + 1;
+        setFadeState("out");
 
-        //daca mai sunt intrebari, se muta la urmatoarea
-        if (nextQuestion < questions.length) {
-            setCurrentQuestion(nextQuestion);
-            setAnswered(false);
-            setSelectedAnswer(null);
-        }
-        //daca nu mai sunt intrebari, se afiseaza score-ul (s-a terminat quizul)
-        else {
-            setFinish(true);
-        }
-    }
+        setTimeout(() => {
+            const next = currentQuestion + 1;
+            if (next < questions.length) {
+                setCurrentQuestion(next);
+                setAnswered(false);
+                setSelectedAnswer(null);
+            } else {
+                setFinish(true);
+            }
+            setFadeState("in");
+        }, 350); // matches CSS transition duration
+    };
 
     return (
         <div className="quiz">
-            {/*afisarea rezultatelor:output rezultate:intrebarea curenta*/}
             {finish ? (
-                <div className="finishedQuiz">
+                <div className={`finishedQuiz fade-transition fade-${fadeState}`}>
                     <div className="cutie-rezultate">
                         <h2>Test finalizat!</h2>
                         <div className="score">
@@ -158,35 +143,35 @@ function Quiz() {
                     </div>
                 </div>
             ) : (
-                    < div className="quiz-inprogress">
-                        <div className="cutie-quiz">
-                            <div className="question-counter">
-                                <h3>Întrebarea {currentQuestion + 1}:</h3>
-                                <h2>{questions[currentQuestion].question}</h2>
-                                <div >
-                                    {questions[currentQuestion].options.map((option, index) =>
-                                    (<button
+                <div className="quiz-inprogress">
+                    <div className={`cutie-quiz fade-transition fade-${fadeState}`}>
+                        <div className="question-counter">
+                            <h3>Întrebarea {currentQuestion + 1}:</h3>
+                            <h2>{questions[currentQuestion].question}</h2>
+                            <div>
+                                {questions[currentQuestion].options.map((option, index) => (
+                                    <button
                                         className={`quiz-options ${answered ? (index === selectedAnswer ? "selected" : "dimmed") : ""}`}
                                         key={index}
                                         onClick={() => handleAnswer(option.isCorrect, index)}
                                         disabled={answered}>
                                         <span className="options-quiz">{option.text}</span>
                                     </button>
-                                    ))}
-                                </div>
+                                ))}
                             </div>
-                            {(
-                                <button 
-                                    className="button-next" 
-                                    onClick={nextQuestion}
-                                    disabled={!answered}>
-                                    {currentQuestion === (questions.length - 1) ? "Vezi rezultatul" : "Următoarea întrebare"}
-                                </button>)}
                         </div>
+                        <button
+                            className="button-next"
+                            onClick={nextQuestion}
+                            disabled={!answered}>
+                            {currentQuestion === (questions.length - 1) ? "Vezi rezultatul" : "Următoarea întrebare"}
+                        </button>
                     </div>
+                </div>
             )}
             <Footer />
         </div>
     );
 };
+
 export default Quiz;

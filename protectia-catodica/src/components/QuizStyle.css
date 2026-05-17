@@ -6,6 +6,21 @@
     gap: 10px;
 }
 
+/* ── Fade transition ── */
+.fade-transition {
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(12px);
+}
+
 .quiz-options{
     display: flex;
     align-items: center;

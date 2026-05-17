@@ -117,7 +117,6 @@ body {
   background-color: #1e293b;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,11 +127,7 @@ body {
   padding-left: 40px;
   padding-right: 40px;
   width: 100%;
-
-  /*Daca schimbi asta vom citi navbar ul pe 2 pagini */
   box-sizing: border-box;
-
-  /* Aici sta deasupra la text, ca sa nu avem probleme */
   z-index: 1000;
   position: sticky;
   top: 0;
@@ -146,9 +141,9 @@ body {
   border: slateblue;
 }
 
-.pozaVolt{
-  height: 300px;
-  width: 250px;
+.pozaExp{
+  height: 700px;
+  width: 700px;
 }
 
 
@@ -320,7 +315,6 @@ body {
 }
 /*BUTOANE NAVBAR STYLE*/
 
-
 .active {
   background-color: #96b9f4;
 }
@@ -382,6 +376,33 @@ body {
   padding: 30px;
   margin: 10 20px;
   border-radius: 20px;
+  position: relative;
+}
+
+.buttonasDom::after {
+    content: '';
+    position: absolute;
+    bottom: 15px; /* Adjust this to move the line up or down within your 30px padding */
+    left: 20%;    /* Centering the line slightly */
+    width: 60%;   /* Line width relative to button text width */
+    height: 4px;  /* Thickness of the underline bar */
+    background-color: #4a24d6; /* Matches your text color, change if you want a different bar color */
+    border-radius: 2px;
+    
+    /* Animation magic: starts scaled down to 0 (invisible) */
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
+}
+
+/* 2. When React Router applies the .active class, scale the line to full size */
+.buttonasDom.active::after {
+    transform: scaleX(1);
+}
+
+/* Optional: Smooth hover effect so it grows when you hover over a button */
+.buttonasDom:hover::after {
+    transform: scaleX(1);
 }
 
 
