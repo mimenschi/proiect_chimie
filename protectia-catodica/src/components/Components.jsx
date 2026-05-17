@@ -224,6 +224,7 @@ function Components() {
                 <table className="results">
                     <thead>
                         <tr>
+                            <th>unu</th>
                             <th>Potențial mediului</th>
                             <th>Potențialul
                                 sistemului metalic</th>
@@ -233,6 +234,17 @@ function Components() {
                     </thead>
                     <tbody>
                         <tr>
+                            <th>Fe</th>
+                            <td>doi</td>
+                            {/*are prea multe zecimale*/}
+                            <td>trei</td>
+                            <td>patru</td>
+                            <td>cinci</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>Fe + M</th>
                             <td>{electrod}</td>
                             {/*are prea multe zecimale*/}
                             <td>{simulate == 1 ? metal : "0"}</td>
