@@ -28,10 +28,7 @@ function Components() {
         { label: "Hg/Hg₂Cl₂", value: "0.244 " },
     ];
 
-    //formule
-    const epsilonRef = 0.266;
-
-
+    
     //aflarea mesajului si a starii corecte
     const handleSimulation = () => {
         let error = "";
