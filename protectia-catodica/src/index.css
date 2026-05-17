@@ -194,7 +194,7 @@ body {
   flex-direction: column;
   align-items: flex-end;
   width: fit-content;
-  margin-right: 5px;
+  margin-right: 60px;
   box-sizing: border-box;
 }
 
@@ -235,7 +235,9 @@ body {
 }
 
 .butonasMetal.selected {
-  color: #3498db;
+  background-color: #aa3bff; 
+  color: #ffffff;            
+  border: 2px solid #ffffff;  
 }
 
 .butonasMetal:hover {

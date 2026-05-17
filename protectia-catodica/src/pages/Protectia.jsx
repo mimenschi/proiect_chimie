@@ -9,8 +9,9 @@ function Protectia(){
     return(
         <>
             <Header />
+            {/*
             <Rocky />
-            <Mj />
+            <Mj />*/}
             <Footer />
         </>
     );

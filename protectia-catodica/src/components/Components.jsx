@@ -178,15 +178,15 @@ function Components() {
                 <div className="metals">
                     <p className="textMetal">Selectează metalul</p>
                     <ul>
-                        <button className="butonasMetal" onClick={() => { setMetal(-1.66), setAnod("Da") }}>Aluminiu</button>
-                        <button className="butonasMetal" onClick={() => { setMetal(0.8), setAnod("Nu") }}>Argint</button>
-                        <button className="butonasMetal" onClick={() => { setMetal(0.34), setAnod("Nu") }}>Cupru</button>
-                        <button className="butonasMetal" onClick={() => { setMetal(-2.37), setAnod("Da") }}>Magneziu</button>
-                        <button className="butonasMetal" onClick={() => { setMetal(-2.71), setAnod("Da") }}>Sodiu</button>
-                        <button className="butonasMetal" onClick={() => { setMetal(-0.25), setAnod("Nu") }}>Nichel</button>
-                        <button className="butonasMetal" onClick={() => { setMetal(-0.13), setAnod("Nu") }}>Plumb</button>
-                        <button className="butonasMetal" onClick={() => { setMetal(-0.14), setAnod("Nu") }}>Staniu</button>
-                        <button className="butonasMetal" onClick={() => { setMetal(-0.76), setAnod("Da") }}>Zinc</button>
+                        <button className={`butonasMetal ${metal === -1.66 ? 'selected' : ''}`} onClick={() => { setMetal(-1.66); setAnod("Da"); }}>Aluminiu</button>
+                        <button className={`butonasMetal ${metal === 0.8 ? 'selected' : ''}`} onClick={() => { setMetal(0.8); setAnod("Nu"); }}>Argint</button>
+                        <button className={`butonasMetal ${metal === 0.34 ? 'selected' : ''}`} onClick={() => { setMetal(0.34); setAnod("Nu"); }}>Cupru</button>
+                        <button className={`butonasMetal ${metal === -2.37 ? 'selected' : ''}`} onClick={() => { setMetal(-2.37); setAnod("Da"); }}>Magneziu</button>
+                        <button className={`butonasMetal ${metal === -2.71 ? 'selected' : ''}`} onClick={() => { setMetal(-2.71); setAnod("Da"); }}>Sodiu</button>
+                        <button className={`butonasMetal ${metal === -0.25 ? 'selected' : ''}`} onClick={() => { setMetal(-0.25); setAnod("Nu"); }}>Nichel</button>
+                        <button className={`butonasMetal ${metal === -0.13 ? 'selected' : ''}`} onClick={() => { setMetal(-0.13); setAnod("Nu"); }}>Plumb</button>
+                        <button className={`butonasMetal ${metal === -0.14 ? 'selected' : ''}`} onClick={() => { setMetal(-0.14); setAnod("Nu"); }}>Staniu</button>
+                        <button className={`butonasMetal ${metal === -0.76 ? 'selected' : ''}`} onClick={() => { setMetal(-0.76); setAnod("Da"); }}>Zinc</button>
                     </ul>
                 </div>
 
