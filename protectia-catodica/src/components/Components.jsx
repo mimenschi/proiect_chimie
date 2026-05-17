@@ -65,8 +65,70 @@ function Components() {
 
             //formulele 
             //sistemul metalic
-            if (metal > -0.44)
-                metal = -0.44;
+            if (metal == -1.66 && electrod==0.266)//Al + Ag/AgCl
+                metal = 0.7;
+            if(metal == -1.66 && electrod==0.244) //Al + calomel
+                metal= 0.65;
+            if(metal==-1.66 && electrod ==0 ) //Al + H
+                metal=0.45;
+            
+            if(metal == 0.8 && electrod == 0.266) //Ag + Ag/AgCl
+                metal=0.45;
+            if(metal == 0.8 && electrod == 0.244) //Ag + calomel
+                metal=0.4;
+            if(metal == 0.8 && electrod == 0) //Ag + H
+                metal=0.15;
+
+            if(metal == 0.34 && electrod == 0.266) //Cu+ Ag/AgCl
+                metal=0.45;
+            if(metal == 0.34 && electrod == 0.244) //Cu + calomel
+                metal=0.4;
+            if(metal == 0.34 && electrod == 0) //Cu+ H
+                metal=0.15;
+
+            if(metal == -2.37 && electrod == 0.266) //Mg+ Ag/AgCl
+                metal=0.25;
+            if(metal == -2.37 && electrod == 0.244) //Mg + calomel
+                metal=0.24;
+            if(metal == -2.37 && electrod == 0) //Mg + H
+                metal=0.22;
+
+            if(metal == -2.37 && electrod == 0.266) //Na+ Ag/AgCl
+                metal=3;
+            if(metal == -2.37 && electrod == 0.244) //Na + calomel
+                metal=2.85;
+            if(metal == -2.37 && electrod == 0) //Na + H
+                metal=2.65;
+
+            if(metal == -0.26 && electrod == 0.266) //Ni+ Ag/AgCl
+                metal=0.45;
+            if(metal == -0.26 && electrod == 0.244) //Ni  + calomel
+                metal=0.4;
+            if(metal == -0.26 && electrod == 0) //Ni + H
+                metal=0.15;
+            
+            if(metal == -0.13 && electrod == 0.266) //Pb+ Ag/AgCl
+                metal=0.45;
+            if(metal == -0.13 && electrod == 0.244) //Pb  + calomel
+                metal=0.4;
+            if(metal == -0.13 && electrod == 0) //Pb + H
+                metal=0.15;
+
+            if(metal == -0.14 && electrod == 0.266) //Sn + Ag/AgCl
+                metal=0.45;
+            if(metal == -0.14 && electrod == 0.244) //Sn + calomel
+                metal=0.4;
+            if(metal == -0.14 && electrod == 0) //Sn + H
+                metal=0.15;
+
+            if(metal == -0.76 && electrod == 0.266) //Zn + Ag/AgCl
+                metal=1.2;
+            if(metal == -0.76 && electrod == 0.244) //Zn + calomel
+                metal=0.95;
+            if(metal == -0.76 && electrod == 0) //Zn+ H
+                metal=0.75;
+
+
 
             //tensiunea reala
             let ten=electrod -metal;
@@ -173,8 +235,8 @@ function Components() {
                         <tr>
                             <td>{electrod}</td>
                             {/*are prea multe zecimale*/}
-                            <td>{simulate == 1 ? a : "0"}</td>
-                            <td>Ala al fierului gol</td>
+                            <td>{simulate == 1 ? metal : "0"}</td>
+                            <td>{simulate == 1 ? -0.44 : "0"}</td>
                             <td>{anod}</td>
                         </tr>
                     </tbody>
