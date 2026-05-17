@@ -41,14 +41,9 @@ function Header() {
                  <img className="pozaCPU fade-in-on-load"
                      src={CPU}
                      alt="CPU"
-
-                 />
-                 <img className="pozaCPU fade-in-on-load"
-                     src={PB}
-                     alt="Motherboard"
-
                  />
              </div>
+             <p className="textCPU fade-in-on-load">Procesor care a sufeti procesul de coroziune</p>
         </header>
     );
 }
