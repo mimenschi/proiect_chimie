@@ -44,7 +44,14 @@ function Header() {
                          src={CPU}
                          alt="CPU"
                      />
-                     <p className="textCPU fade-in-on-load">Procesor care a sufeti procesul de coroziune</p>
+                     <h2 className="textCPU fade-in-on-load">Procesor care a suferit procesul de coroziune</h2>
+                 </div>
+                 <div className="poze-container">
+                     <img className="pozaCPU fade-in-on-load"
+                         src={PB}
+                         alt="CPU"
+                     />
+                     <h2 className="textCPU fade-in-on-load">Placă de bază care a suferit procesul de coroziune</h2>
                  </div>
              </div>
              
