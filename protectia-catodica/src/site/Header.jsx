@@ -8,7 +8,8 @@ import "./HeaderStyle.css"
 
 
 function Header() {
-     return(
+     
+    return(
         <header>
             <h1 className="titlu">Scopul lucrării:</h1>
             <p className="textTeorie fade-in-on-load"> Electrodul este un sistem electroneutru format din soluția de electrolit și dintr-un metal. 

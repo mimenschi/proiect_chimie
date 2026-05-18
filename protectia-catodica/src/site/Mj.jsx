@@ -9,6 +9,7 @@ function Mj(){
     const handleButtonClick = () => {
     setShowImage(true);
 
+    
     const audio = new Audio(MicaheJ);
     audio.play().catch(error => {
       console.log("Playback failed. Browsers often block auto-playing audio until you interact with the page.", error);

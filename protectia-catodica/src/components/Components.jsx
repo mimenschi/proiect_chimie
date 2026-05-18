@@ -29,6 +29,7 @@ function Components() {
     ];
 
     
+    
     //aflarea mesajului si a starii corecte
     const handleSimulation = () => {
         let error = "";

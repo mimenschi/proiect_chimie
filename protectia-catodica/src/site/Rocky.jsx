@@ -5,7 +5,8 @@ import HarryS from '../assets/signOfTheTimes.mp3'
 
 
 function Rocky(){
-    const [showImage, setShowImage] = useState(false);
+   
+  const [showImage, setShowImage] = useState(false);
 
     const handleButtonClick = () => {
     setShowImage(true);

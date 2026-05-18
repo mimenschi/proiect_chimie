@@ -36,6 +36,7 @@ function useScrollReveal(containerRef) {
 }
 
 function Teorie() {
+    
     const containerRef = useRef(null);
     useScrollReveal(containerRef);
 

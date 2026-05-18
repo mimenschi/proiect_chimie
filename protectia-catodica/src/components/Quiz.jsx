@@ -126,6 +126,7 @@ function Quiz() {
         }, 350); // matches CSS transition duration
     };
 
+    
     return (
         <div className="quiz">
             {finish ? (

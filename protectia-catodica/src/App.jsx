@@ -13,6 +13,7 @@ import Protectia from './pages/Protectia.jsx'
 import Quiz from './components/Quiz.jsx'
 
 function App() {
+  
   return(
 
       <>
