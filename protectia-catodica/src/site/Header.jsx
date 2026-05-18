@@ -38,12 +38,15 @@ function Header() {
             </p>
 
              <div className="poze">
-                 <img className="pozaCPU fade-in-on-load"
-                     src={CPU}
-                     alt="CPU"
-                 />
+                 <div className="poze-container">
+                     <img className="pozaCPU fade-in-on-load"
+                         src={CPU}
+                         alt="CPU"
+                     />
+                     <p className="textCPU fade-in-on-load">Procesor care a sufeti procesul de coroziune</p>
+                 </div>
              </div>
-             <p className="textCPU fade-in-on-load">Procesor care a sufeti procesul de coroziune</p>
+             
         </header>
     );
 }

@@ -153,7 +153,7 @@ function Components() {
 
                     <div className="voltmetru">
                         <form>
-                            <label className="textVoltmetru">Voltmetru(mV)</label>
+                            <label className="textVoltmetru">Voltmetru(V)</label>
                             <input
                                 type="number"
                                 step="0.01"
@@ -203,13 +203,13 @@ function Components() {
 
             {/*REZULTATE */}
             <div className="results">
-                <h3>Rezultate</h3>
+                <h3>Rezultate (mediu acid)</h3>
                 <table className="results">
                     <thead>
                         <tr>
                             <th></th>
                             <th>Potențial electrodului (V)</th>
-                            <th>Potențialul
+                            <th>Potențialul standard al
                                 sistemului metalic (V)</th>
                             <th>Potențial de referință (V)</th>
                             <th>Este anod de sacrificiu?</th>
