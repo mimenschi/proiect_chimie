@@ -23,9 +23,9 @@ function Components() {
 
     //ELECTROD
     const options = [
-        { label: "Ag/AgCl", value: "0.266" },
-        { label: "Pt/H₂", value: "0 " },
-        { label: "Hg/Hg₂Cl₂", value: "0.244 " },
+        { label: "Ag/AgCl,KCl", value: "0.266" },
+        { label: "H⁺/H₂", value: "0 " },
+        { label: "Hg/Hg₂Cl₂,KCl", value: "0.244 " },
     ];
 
     
