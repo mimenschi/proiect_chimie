@@ -4,6 +4,7 @@ import Teorie from '../pages/Teorie.jsx'
 import '../pages/TeorieStyle.css'
 import CPU from "../assets/CPU.png"
 import PB from "../assets/motherboard.png"
+import "./HeaderStyle.css"
 
 
 function Header() {
