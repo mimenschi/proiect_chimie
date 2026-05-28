@@ -1,7 +1,7 @@
 import { Select } from "react-dropdown-select"
 import React, { useState } from "react"
 import Poza from '../assets/placehlder.png'
-import Experiment from '../assets/Experiment.png'
+import Experiment from '../assets/experiment.png'
 import Experimentbg from '../assets/Experimentbg.png'
 
 function Components() {

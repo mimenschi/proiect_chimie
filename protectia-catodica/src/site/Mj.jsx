@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import MicaheJ from '../assets/whoIsIt.mp3'
-import Leclerc from '../assets/Leclerc.png'
+import Leclerc from '../assets/leclerc.png'
 
 
 function Mj(){
