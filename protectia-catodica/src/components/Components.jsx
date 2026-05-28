@@ -209,10 +209,10 @@ function Components() {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Potențial electrodului (V)</th>
+                            <th>Potențial electrodului de referință (V)</th>
                             <th>Potențialul standard al
                                 sistemului metalic (V)</th>
-                            <th>Potențial de referință (V)</th>
+                            <th>Valoarea afișată de voltmetru (V)</th>
                             <th>Este anod de sacrificiu?</th>
                         </tr>
                     </thead>
